@@ -1,0 +1,29 @@
+<!-- services section starts  -->
+<section class="services" id="services">
+    <h1 class="heading"> Nombre del Maestro: <span>{{user.name}}</span> </h1>
+    <a href="javascript:history.back()" class="btn">Volver</a>
+    <div class="box-container">
+
+        {{#each notes}}
+        <div class="box">
+
+            <span>{{@index}}</span>
+
+            <form action="/cur/?_method=GET" method="POST">
+                <input type="hidden" name="_method" value="GET">
+
+                <h3>{{title}}</h3>
+
+                <p>{{description}}</p>
+
+                <button type="submit" class="btn btn-success btn-block btn-sm">
+                    Imprimir Curriculum
+                </button>
+            </form>
+
+        </div>
+        {{/each}}
+
+    </div>
+</section>
+<!-- services section ends -->

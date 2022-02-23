@@ -1,0 +1,24 @@
+<!-- services section starts  -->
+<section class="services" id="services">
+    <h1 class="heading"> All <span>Notes</span> </h1>
+    <div class="box-container">
+
+        {{#each notes}}
+        <div class="box">
+
+            <a href="/notes/edit/{{_id}}"><i class="fas fa-edit"></i></a>
+            <span>{{@index}}</span>
+            <h3>{{title}}</h3>
+            <p>{{description}}</p>
+            <form action="/notes/delete/{{_id}}?_method=DELETE" method="POST">
+                <input type="hidden" name="_method" value="DELETE">
+                <button type="submit" class="btn">
+                    Delete
+                </button>
+            </form>
+        </div>
+        {{/each}}
+
+    </div>
+</section>
+<!-- services section ends -->

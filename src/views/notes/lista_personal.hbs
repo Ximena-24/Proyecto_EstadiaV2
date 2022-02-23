@@ -1,0 +1,77 @@
+<!-- pricing section starts  -->
+<section class="pricing services" id="pricing">
+    <h1 class="heading">Lista<span> Personal</span> </h1>
+    <div class="box-contanier">
+
+        <div class="box">
+            <span class="fas fa-exclamation"></span>
+            <div class="container">
+
+                <a href="javascript:history.back()" class="btn">Volver</a>
+            </div>
+
+            <h3>Todos los Registros</h3>
+
+            <table class="resp">
+                <thead>
+                    <tr class="tablacolor">
+                        <th scope="col">
+                            <h1>N.</h1>
+                        </th>
+                        <th scope="col">
+                            <h1>Nombre</h1>
+                        </th>
+                        <th scope="col">
+                            <h1>Fecha de Ingreso</h1>
+                        </th>
+                        <th scope="col">
+                            <h1>Estatus</h1>
+                        </th>
+                        <th scope="col">
+                            <h1>Operacion</h1>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    {{#each user}}
+
+                    <tr>
+                        <th scope="row">{{@index}}</th>
+                        <td>
+                            {{name}}
+                        </td>
+
+                        <td>
+                            {{createdAt}}
+                        </td>
+
+                        <td>{{#if status}}
+                            Activo
+                            {{else}}
+                            Inactivo
+                            {{/if}}
+                        </td>
+                        <td>
+                            <a href="/personal/info/{{_id}}" class="btn">Ver perfil</a>
+                            <a href="/personal/notes/{{_id}}" class="btn">Ver notas</a>
+                            {{#if status}}
+                            <a href="/personal/toogleStatus/{{_id}}" class="btn">Dar de baja</a>
+                            {{else}}
+                            <a href="/personal/toogleStatus/{{_id}}" class="btn">Dar de alta</a>
+                            {{/if}}
+                        </td>
+                    </tr>
+
+                    {{/each}}
+
+                </tbody>
+            </table>
+
+
+        </div>
+
+
+    </div>
+</section>
+<!-- pricing section ends -->

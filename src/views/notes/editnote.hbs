@@ -1,0 +1,40 @@
+<!-- services section starts  -->
+<section class="services" id="services">
+
+    <h1 class="heading"> Editar <span>Actividad</span> </h1>
+
+    <div class="box-container">
+
+        <section class="centrado">
+
+            <div class="box">
+
+                <i class="fas fa-user"></i>
+                <h3>New Note</h3>
+
+                <form action="/notes/newnote" method="POST">
+                    <input type="hidden" name="_method" value="PUT">
+
+                    <h2>Titulo</h2>
+                    <input class="box" type="text" name="title" value="{{note.title}}"></input>
+
+                    <h2>Descripcion</h2>
+                    <textarea class="box" type="description" name="description">{{note.description}}</textarea>
+
+                    <div class="d-grid">
+                        <button class="btn" type="submit">
+                            Guardar
+                        </button>
+                        <a href="javascript:history.back()" class="btn">Volver</a>
+                    </div>
+
+                </form>
+
+            </div>
+
+        </section>
+
+    </div>
+
+</section>
+<!-- services section ends -->

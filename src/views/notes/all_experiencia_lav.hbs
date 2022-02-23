@@ -1,0 +1,43 @@
+<section class="contact services">
+    <h1 class="heading">Experiencia<span> Laboral</span> </h1>
+
+    <div class="box-container">
+
+        <section class="centrado">
+
+            <div class="box">
+
+                <form action="/notes/newExpLab" method="POST">
+                    <h1>Experiencia Laboral</h1>
+                    <h1>del Mtro. {{user.name}}</h1>
+
+
+                    <h2><strong> Nombre de la Carrera:</strong></h2>
+                    <input type="text" class="box" name="carrera" required>
+
+                    <h2><strong> Nombre de la Institucion:</strong></h2>
+                    <input type="text" class="box" value="{{institucion}}" name="institucion">
+
+                    <h2><strong> Fecha de inicio:</strong></h2>
+                    <input type="date" class="box" value="{{fecha_inicio}}" name="fecha_inicio">
+
+                    <h2><strong> Fecha de Termino:</strong></h2>
+                    <input type="date" class="box" value="{{fecha_termino}}" name="fecha_termino">
+
+                    <h2><strong> Puesto:</strong></h2>
+                    <input type="text" class="box" value="{{puesto}}" name="puesto">
+
+
+                    <div><button class="btn">
+                        Guardar
+                    </button>
+                    <a href="javascript:history.back()" class="btn">Volver</a></div>
+
+                </form>
+
+            </div>
+
+        </section>
+
+    </div>
+</section>

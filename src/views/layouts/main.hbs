@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio</title>
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- swiper css link  -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="/css/style.css">
+
+</head>
+
+<body>
+
+    {{>navigation}}
+
+    <main class="container p-5">
+        {{>messages}}
+        {{>errors}}
+        {{{body}}}
+    </main>
+
+    <!-- footer section starts  -->
+    <section class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-8">
+                    <div class="box-container">
+                        <div class="box centrado">
+                            <h3 class="credit"><span>quick links</span></h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-8">
+                    <div class="box-container">
+                        <div class="box centrado">
+                            <a href="#"> <i class="fas fa-chevron-right"></i> Inicio </a>
+                        </div>
+                        <div class="box centrado">
+                            <a href="#"> <i class="fas fa-chevron-right"></i> Register </a>
+                        </div>
+                        <div class="box centrado">
+                            <a href="#"> <i class="fas fa-chevron-right"></i> Login </a>
+                        </div>
+                        <div class="box centrado">
+                            <a href="#"> <i class="fas fa-chevron-right"></i> Formulario </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-8">
+                    <div class="box-container">
+                        <div class="box centrado">
+                            <a href="#"> <i class="fas fa-chevron-right"></i> Inicio </a>
+                        </div>
+                        <div class="box centrado">
+                            <a href="#"> <i class="fas fa-chevron-right"></i> Inicio </a>
+                        </div>
+                        <div class="box centrado">
+                            <a href="#"> <i class="fas fa-chevron-right"></i> Inicio </a>
+                        </div>
+                        <div class="box centrado">
+                            <a href="#"> <i class="fas fa-chevron-right"></i> Inicio </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <section class="footer2">
+            <div class="box-container2">
+
+                <div class="box">
+                    <h3 class="credit"><i class="fas fa-address-card"></i> Sistema de <span> Reportes. 2022 </span></h3>
+                    <p class="centrado">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi, voluptatem.
+                        <br>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi, voluptatem.
+                    </p>
+                    <div class="share centrado">
+                        <a href="#" class="fab fa-facebook-f"></a>
+                        <a href="#" class="fab fa-twitter"></a>
+                        <a href="#" class="fab fa-instagram"></a>
+                        <a href="#" class="fab fa-linkedin"></a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <div class="credit"> &copy; Univercidad Tecnologica del <span> Norte de Aguascalientes. 2022 </span> </div>
+    </section>
+    <!-- footer section ends -->
+
+    <!-- swiper js link  -->
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+
+
+    <!-- custom js file link  -->
+    <script src="/js/script.js"></script>
+    <script src="/js/script2.js"></script>
+</body>
+
+</html>

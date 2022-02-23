@@ -1,0 +1,74 @@
+<!-- pricing section starts  -->
+<section class="pricing services" id="pricing">
+    <h1 class="heading">Experiencia <span> Laboral</span> </h1>
+    <div class="box-contanier">
+
+        <div class="box">
+            <span class="fas fa-exclamation"></span>
+            <div class="container">
+
+                <a href="/dato/AllExperie" class="btn">Agregar</a>
+                <a href="/rol" class="btn">Volver</a>
+            </div>
+
+            <h3>Trayectoria Profesional</h3>
+
+            <table class="resp">
+                <thead>
+                    <tr class="tablacolor">
+                        <th scope="col">
+                            <h1>Puesto Desempeñado.</h1>
+                        </th>
+                        <th scope="col">
+                            <h1>Institucion</h1>
+                        </th>
+                        <th scope="col">
+                            <h1>Fecha de Inicio</h1>
+                        </th>
+                        <th scope="col">
+                            <h1>Fecha Fin</h1>
+                        </th>
+                        <th scope="col">
+                            <h1>Empleo Actual</h1>
+                        </th>
+                        <th scope="col">
+                            <h1>Acciones</h1>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{#each explab}}
+
+                    <tr>
+                        <th scope="row">{{@index}}</th>
+                        <td>
+                            {{institucion}}
+                        </td>
+
+                        <td>
+                            {{fecha_inicio}}
+                        </td>
+
+                        <td>
+                            {{fecha_termino}}
+                        </td>
+
+                        <td>
+                            actual
+                        </td>
+
+                        <td>
+                            <a href="#" class="btn">Editar</a>
+
+                            <a href="#" class="btn">Eliminar</a>
+                        </td>
+                    </tr>
+
+                    {{/each}}
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
+<!-- pricing section ends -->
