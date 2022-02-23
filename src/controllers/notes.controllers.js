@@ -369,4 +369,166 @@ notasCtrl.renderimage = async (req, res) => {
     res.render('notes/profile', { user });
 };
 
+
+notasCtrl.agregarTipos = async (req, res) => {
+
+    if (req.user.rango === "Maestro") {
+        res.render('notes/agregar_tipos_nuev');
+    }
+
+    if (req.user.rango === "Director") {
+        res.render('notes/agregar_tipos_nuev');
+    }
+
+    if (req.user.rango === "Admin") {
+        res.render('administrador/index_administrador');
+
+    }
+};
+
+notasCtrl.articulo = async (req, res) => {
+
+    if (req.user.rango === "Maestro") {
+        res.render('notes/articulo');
+    }
+
+    if (req.user.rango === "Director") {
+        res.render('notes/articulo');
+    }
+
+    if (req.user.rango === "Admin") {
+        res.render('administrador/index_administrador');
+
+    }
+};
+
+notasCtrl.libro = async (req, res) => {
+
+    if (req.user.rango === "Maestro") {
+        res.render('notes/libro');
+    }
+
+    if (req.user.rango === "Director") {
+        res.render('notes/libro');
+    }
+
+    if (req.user.rango === "Admin") {
+        res.render('administrador/index_administrador');
+
+    }
+};
+
+notasCtrl.capituloL = async (req, res) => {
+
+    if (req.user.rango === "Maestro") {
+        res.render('notes/capitulo_libro');
+    }
+
+    if (req.user.rango === "Director") {
+        res.render('notes/capitulo_libro');
+    }
+
+    if (req.user.rango === "Admin") {
+        res.render('administrador/index_administrador');
+
+    }
+};
+
+notasCtrl.reporteTec = async (req, res) => {
+
+    if (req.user.rango === "Maestro") {
+        res.render('notes/reporte_tec');
+    }
+
+    if (req.user.rango === "Director") {
+        res.render('notes/reporte_tec');
+    }
+
+    if (req.user.rango === "Admin") {
+        res.render('administrador/index_administrador');
+
+    }
+};
+
+notasCtrl.memorias = async (req, res) => {
+
+    if (req.user.rango === "Maestro") {
+        res.render('notes/memorias');
+    }
+
+    if (req.user.rango === "Director") {
+        res.render('notes/memorias');
+    }
+
+    if (req.user.rango === "Admin") {
+        res.render('administrador/index_administrador');
+
+    }
+};
+
+notasCtrl.patentes = async (req, res) => {
+
+    if (req.user.rango === "Maestro") {
+        res.render('notes/patentes');
+    }
+
+    if (req.user.rango === "Director") {
+        res.render('notes/patentes');
+    }
+
+    if (req.user.rango === "Admin") {
+        res.render('administrador/index_administrador');
+
+    }
+};
+
+notasCtrl.congreso = async (req, res) => {
+
+    if (req.user.rango === "Maestro") {
+        res.render('notes/congreso');
+    }
+
+    if (req.user.rango === "Director") {
+        res.render('notes/congreso');
+    }
+
+    if (req.user.rango === "Admin") {
+        res.render('administrador/index_administrador');
+
+    }
+};
+
+notasCtrl.curso = async (req, res) => {
+
+    if (req.user.rango === "Maestro") {
+        res.render('notes/curso');
+    }
+
+    if (req.user.rango === "Director") {
+        res.render('notes/curso');
+    }
+
+    if (req.user.rango === "Admin") {
+        res.render('administrador/index_administrador');
+
+    }
+};
+
+notasCtrl.diplomado = async (req, res) => {
+
+    if (req.user.rango === "Maestro") {
+        res.render('notes/diplomado');
+    }
+
+    if (req.user.rango === "Director") {
+        res.render('notes/diplomado');
+    }
+
+    if (req.user.rango === "Admin") {
+        res.render('administrador/index_administrador');
+
+    }
+};
+
+
 module.exports = notasCtrl;

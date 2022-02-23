@@ -1,0 +1,53 @@
+<!-- services section starts  -->
+<section class="services" id="services">
+
+    <h1 class="heading">Nuevo<span> Articulo</span> </h1>
+
+    <div class="box-container">
+        <section class="centrado">
+            <div class="box">
+                <form action="/notes/academico" method="POST">
+                    <h3>del Mtro. {{user.name}}</h3>
+
+                    <h2><strong> ISSN:</strong></h2>
+                    <input type="text" class="box" name="carrera">
+
+                    <h2><strong> DOI:</strong></h2>
+                    <input type="text" class="box" name="institucion">
+
+                    <h2><strong> Nombre del Articulo:</strong></h2>
+                    <input type="text" class="box" name="" required>
+
+                    <h2> <strong> Nombre revista:</strong></h2>
+                    <input type="text" class="box" name="fecha_termino" required>
+
+                    <h2><strong> Titulo del Articulo:</strong></h2>
+                    <input type="text" class="box" name="" required>
+
+                    <h2><strong> Año de Publicacion:</strong></h2>
+                    <input type="date" class="box" name="" required>
+
+                    <h2><strong> Area:</strong></h2>
+                    <input type="text" class="box" name="" required>
+
+                    <h2><strong>Rol:</strong></h2>
+                    <select value="tipo" value="{{tipo}}" name="tipo">
+                        <option value="">Selecciona una opción</option>
+                        <option value="Principal" label="Principal">Principal</option>
+                        <option value="Co-tutor" label="Co-tutor">Co-tutor</option>
+                        <option value="Participante" label="Participante">Participante</option>
+                    </select>
+
+                    <div>
+                        <button class="btn">
+                            Guardar
+                        </button>
+                        <a href="javascript:history.back()" class="btn">Volver</a>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </div>
+
+</section>
+<!-- services section ends -->

@@ -1403,3 +1403,110 @@ h2{
   color: var(--text-color-1);
   padding: 1rem 0rem 0rem;
 }
+
+
+
+
+
+
+.gallery2 .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr));
+    gap:1.5rem;
+}
+
+.gallery2 .box-container .box{
+    height: 25rem;
+    border-radius: .5rem;
+    overflow: hidden;
+    border:1rem solid var(--bg-color-2);
+    box-shadow: var(--box-shadow);
+    position: relative;
+    cursor: pointer;
+}
+
+.gallery2 .box-container .box img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.gallery2 .box-container .box .content{
+    position: absolute;
+    top:0; left: 0;
+    height: 100%;
+    width: 100%;
+    background: var(--bg-color-2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    transform: scale(0);
+}
+
+.gallery2 .box-container .box .content h3{
+    font-size: 2.5rem;
+    color: var(--text-color-1);
+    padding-bottom: .5rem;
+    transform: translateY(-5rem);
+    opacity: 0;
+    transition-delay: .3s;
+}
+
+.gallery2 .box-container .box .content span{
+    font-size: 1.5rem;
+    color: var(--text-color-2);
+    transform: translateY(5rem);
+    opacity: 0;
+    transition-delay: .3s;
+}
+
+.gallery2 .box-container .box:hover .content{
+    transform: scale(1);
+}
+
+.gallery2 .box-container .box:hover .content h3,
+.gallery2 .box-container .box:hover .content span{
+    transform: translateY(0rem);
+    opacity: 1;
+}
+
+.contenedor{
+  position: relative;
+  display: inline-block;
+  text-align: center;
+}
+.texto-encima{
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+.centrado2{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 180%);
+  font-size: 2rem;
+  color: darkgoldenrod;
+}
+
+
+.services2{
+  padding-top: 10rem ;
+  padding-bottom: 10rem;
+}
+
+
+.services2 .box-container .box i{
+    height: 5.5rem;
+    line-height: 5.5rem;
+    width: 5.5rem;
+    font-size: 2.5rem;
+    border-radius: 50%;
+    color:#fff;
+    background: var(--main-color);
+  
+}
+
+
+
