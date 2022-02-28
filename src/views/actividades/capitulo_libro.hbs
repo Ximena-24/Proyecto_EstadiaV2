@@ -1,43 +1,43 @@
 <!-- services section starts  -->
 <section class="services" id="services">
 
-    <h1 class="heading">Nueva<span> Memorias</span> </h1>
+    <h1 class="heading">Nuevo<span> Capitulo Libro</span> </h1>
 
     <div class="box-container">
         <section class="centrado">
             <div class="box">
-                <form action="/notes/academico" method="POST">
+                <form action="/actividades/newCapLibro" method="POST">
                     <h3>del Mtro. {{user.name}}</h3>
 
                     <h2><strong> ISBN:</strong></h2>
-                    <input type="text" class="box" name="carrera">
+                    <input type="text" class="box" name="isbn">
 
                     <h2><strong> Titulo del Libro:</strong></h2>
-                    <input type="text" class="box" name="institucion" required>
+                    <input type="text" class="box" name="titulo_libro" required>
 
                     <h2><strong> Pais:</strong></h2>
-                    <input type="text" class="box" name="" required>
+                    <input type="text" class="box" name="pais" required>
 
                     <h2><strong> Idioma:</strong></h2>
-                    <input type="text" class="box" name="" required>
+                    <input type="text" class="box" name="idioma" required>
 
                     <h2><strong> Año de Publicacion:</strong></h2>
-                    <input type="date" class="box" name="" required>
+                    <input type="date" class="box" name="fecha_publicacion" required>
 
                     <h2> <strong> Editorial:</strong></h2>
-                    <input type="text" class="box" name="fecha_termino" required>
+                    <input type="text" class="box" name="editorial" required>
 
                     <h2><strong> Edicion:</strong></h2>
-                    <input type="text" class="box" name="" required>
+                    <input type="text" class="box" name="edicion" required>
 
                     <h2><strong> Titulo del Capitulo:</strong></h2>
-                    <input type="text" class="box" name="" required>
+                    <input type="text" class="box" name="titulo_capitulo" required>
 
                     <h2><strong> Numero del Capitulo:</strong></h2>
-                    <input type="text" class="box" name="" required>
+                    <input type="number" class="box" name="num_capitulo" required>
 
                     <h2><strong> Pagina del Libro:</strong></h2>
-                    <input type="numeric" class="box" name="" required>
+                    <input type="number" class="box" name="pag_Capitulo" required>
 
                     <div>
                         <button class="btn">

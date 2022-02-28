@@ -6,32 +6,32 @@
     <div class="box-container">
         <section class="centrado">
             <div class="box">
-                <form action="/notes/academico" method="POST">
+                <form action="/actividades/newArticulo" method="POST">
                     <h3>del Mtro. {{user.name}}</h3>
 
                     <h2><strong> ISSN:</strong></h2>
-                    <input type="text" class="box" name="carrera">
+                    <input type="text" class="box" name="issn">
 
                     <h2><strong> DOI:</strong></h2>
-                    <input type="text" class="box" name="institucion">
+                    <input type="text" class="box" name="doi">
 
                     <h2><strong> Nombre del Articulo:</strong></h2>
-                    <input type="text" class="box" name="" required>
+                    <input type="text" class="box" name="nom_articulo" required>
 
                     <h2> <strong> Nombre revista:</strong></h2>
-                    <input type="text" class="box" name="fecha_termino" required>
+                    <input type="text" class="box" name="nom_revista" required>
 
                     <h2><strong> Titulo del Articulo:</strong></h2>
-                    <input type="text" class="box" name="" required>
+                    <input type="text" class="box" name="titulo_revista" required>
 
                     <h2><strong> Año de Publicacion:</strong></h2>
-                    <input type="date" class="box" name="" required>
+                    <input type="date" class="box" name="fecha_publicacion" required>
 
                     <h2><strong> Area:</strong></h2>
-                    <input type="text" class="box" name="" required>
+                    <input type="text" class="box" name="area" required>
 
                     <h2><strong>Rol:</strong></h2>
-                    <select value="tipo" value="{{tipo}}" name="tipo">
+                    <select value="rol" name="rol">
                         <option value="">Selecciona una opción</option>
                         <option value="Principal" label="Principal">Principal</option>
                         <option value="Co-tutor" label="Co-tutor">Co-tutor</option>

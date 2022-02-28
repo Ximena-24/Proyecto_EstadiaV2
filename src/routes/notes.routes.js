@@ -29,17 +29,7 @@ const {
     upload, 
     renderimage,
     createAcademiForm,
-    createExpLabForm,
-    agregarTipos,
-    articulo,
-    libro,
-    capituloL,
-    reporteTec,
-    memorias,
-    patentes,
-    congreso,
-    curso,
-    diplomado
+    createExpLabForm
 
 
 
@@ -109,35 +99,5 @@ router.get('/dato/Experience', isAuthenticated, renderExperiLavo);
 router.get('/dato/AllExperie', isAuthenticated, renderAllExperiencia);
 
 router.post('/notes/newExpLab', isAuthenticated, createExpLabForm); 
-
-router.get('/notes/agregarTipo', isAuthenticated, agregarTipos); 
-
-router.get('/notes/articulo', isAuthenticated, articulo); 
-
-router.get('/notes/libro', isAuthenticated, libro); 
-
-router.get('/notes/CapituloLibro', isAuthenticated, capituloL); 
-
-router.get('/notes/ReportesTecnicos', isAuthenticated, reporteTec); 
-
-router.get('/notes/memorias', isAuthenticated, memorias); 
-
-router.get('/notes/patentes', isAuthenticated, patentes); 
-
-router.get('/notes/congreso', isAuthenticated, congreso); 
-
-router.get('/notes/curso', isAuthenticated, curso); 
-
-router.get('/notes/diplomado', isAuthenticated, diplomado); 
-
-
-
-
-
-
-
-
-
-
 
 module.exports = router; 
