@@ -9,7 +9,7 @@ const ArticuloSchema = new Schema({
         type: String,
         required:true
     },
-    nom_articulo: {
+    titulo: {
         type: String,
         required: true
     },

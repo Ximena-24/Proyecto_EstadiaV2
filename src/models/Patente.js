@@ -37,7 +37,7 @@ const PatenteSchema = new Schema({
         type: String,
         required: true
     },
-    nombreI: {
+    titulo: {
         type: String,
         required:true
     },

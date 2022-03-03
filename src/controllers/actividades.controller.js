@@ -44,13 +44,19 @@ actividadesCtrl.articulo = async (req, res) => {
 };
 
 actividadesCtrl.createArticulo = async (req, res) => {
-    const { issn, doi, nom_articulo, nom_revista, titulo_revista, fecha_publicacion, area, rol } = req.body;
-    const newArticulo = new Articulo({ issn, doi, nom_articulo, nom_revista, titulo_revista, fecha_publicacion, area, rol });
+    const { issn, doi, titulo, nom_revista, titulo_revista, fecha_publicacion, area, rol } = req.body;
+    const newArticulo = new Articulo({ issn, doi, titulo, nom_revista, titulo_revista, fecha_publicacion, area, rol });
     newArticulo.user = req.user.id;
     await newArticulo.save();
     req.flash('success_msg', 'Articulo creado correctamente');
     res.redirect('/rol');
 
+};
+
+actividadesCtrl.verarticulos = async (req, res) => {
+    const actividad = await Articulo.find({ user: req.user.id }).sort({ createdAt: 'desc' });
+    const nomAct = "Artículo";
+    res.render('actividades/actividades', { actividad, nomAct });
 };
 
 actividadesCtrl.libro = async (req, res) => {
@@ -68,12 +74,18 @@ actividadesCtrl.libro = async (req, res) => {
 };
 
 actividadesCtrl.createLibro = async (req, res) => {
-    const { isbn, titulo_libro, pais, idioma, fecha_publicacion, editorial, edicion } = req.body;
-    const newLibro = new Libro({ isbn, titulo_libro, pais, idioma, fecha_publicacion, editorial, edicion });
+    const { isbn, titulo, pais, idioma, fecha_publicacion, editorial, edicion } = req.body;
+    const newLibro = new Libro({ isbn, titulo, pais, idioma, fecha_publicacion, editorial, edicion });
     newLibro.user = req.user.id;
     await newLibro.save();
     req.flash('success_msg', 'Libro creado correctamente');
     res.redirect('/rol');
+};
+
+actividadesCtrl.verlibros = async (req, res) => {
+    const actividad = await Libro.find({ user: req.user.id }).sort({ createdAt: 'desc' });
+    const nomAct = "Libro";
+    res.render('actividades/actividades', { actividad, nomAct });
 };
 
 actividadesCtrl.capituloL = async (req, res) => {
@@ -91,12 +103,18 @@ actividadesCtrl.capituloL = async (req, res) => {
 };
 
 actividadesCtrl.createCapLibro = async (req, res) => {
-    const { isbn, titulo_libro, pais, idioma, fecha_publicacion, editorial, edicion, titulo_capitulo, num_capitulo, pag_Capitulo} = req.body;
-    const newCapLibro = new CapLibro({ isbn, titulo_libro, pais, idioma, fecha_publicacion, editorial, edicion, titulo_capitulo, num_capitulo, pag_Capitulo });
+    const { isbn, titulo, pais, idioma, fecha_publicacion, editorial, edicion, titulo_capitulo, num_capitulo, pag_Capitulo } = req.body;
+    const newCapLibro = new CapLibro({ isbn, titulo, pais, idioma, fecha_publicacion, editorial, edicion, titulo_capitulo, num_capitulo, pag_Capitulo });
     newCapLibro.user = req.user.id;
     await newCapLibro.save();
     req.flash('success_msg', 'Capitulo de libro creado correctamente');
-    res.redirect('/rol'); 
+    res.redirect('/rol');
+};
+
+actividadesCtrl.vercapitulos = async (req, res) => {
+    const actividad = await CapLibro.find({ user: req.user.id }).sort({ createdAt: 'desc' });
+    const nomAct = "Capitulos de Libro";
+    res.render('actividades/actividades', { actividad, nomAct });
 };
 
 actividadesCtrl.reporteTec = async (req, res) => {
@@ -115,12 +133,18 @@ actividadesCtrl.reporteTec = async (req, res) => {
 };
 
 actividadesCtrl.createreporteTec = async (req, res) => {
-    const { titulo, empresa, fecha_entrega, descripcion, objetivos} = req.body;
-    const newReporteTec = new ReporteTec({ titulo, empresa, fecha_entrega, descripcion, objetivos});
+    const { titulo, empresa, fecha_entrega, descripcion, objetivos } = req.body;
+    const newReporteTec = new ReporteTec({ titulo, empresa, fecha_entrega, descripcion, objetivos });
     newReporteTec.user = req.user.id;
     await newReporteTec.save();
     req.flash('success_msg', 'Reporte tecnico creado correctamente');
-    res.redirect('/rol'); 
+    res.redirect('/rol');
+};
+
+actividadesCtrl.verreportes = async (req, res) => {
+    const actividad = await ReporteTec.find({ user: req.user.id }).sort({ createdAt: 'desc' });
+    const nomAct = "Reportes técnicos";
+    res.render('actividades/actividades', { actividad, nomAct });
 };
 
 actividadesCtrl.memorias = async (req, res) => {
@@ -138,12 +162,18 @@ actividadesCtrl.memorias = async (req, res) => {
 };
 
 actividadesCtrl.createMemorias = async (req, res) => {
-    const { isbn, titulo_libro, pais, idioma, fecha_publicacion, editorial, edicion, titulo_capitulo, num_capitulo, pag_capitulo} = req.body;
-    const newMemoria = new Memoria({ isbn, titulo_libro, pais, idioma, fecha_publicacion, editorial, edicion, titulo_capitulo, num_capitulo, pag_capitulo });
+    const { isbn, titulo, pais, idioma, fecha_publicacion, editorial, edicion, titulo_capitulo, num_capitulo, pag_capitulo } = req.body;
+    const newMemoria = new Memoria({ isbn, titulo, pais, idioma, fecha_publicacion, editorial, edicion, titulo_capitulo, num_capitulo, pag_capitulo });
     newMemoria.user = req.user.id;
     await newMemoria.save();
     req.flash('success_msg', 'Memoria creada correctamente');
-    res.redirect('/rol'); 
+    res.redirect('/rol');
+};
+
+actividadesCtrl.vermemorias = async (req, res) => {
+    const actividad = await Memoria.find({ user: req.user.id }).sort({ createdAt: 'desc' });
+    const nomAct = "Memorias";
+    res.render('actividades/actividades', { actividad, nomAct });
 };
 
 actividadesCtrl.patentes = async (req, res) => {
@@ -163,12 +193,18 @@ actividadesCtrl.patentes = async (req, res) => {
 };
 
 actividadesCtrl.createPatente = async (req, res) => {
-    const { nombreS, nitS, nacionalidadS, paisS, edadS, nombreP, nitP, nacionalidadP, paisP, nombreI, nitI, nacionalidadI, paisI, edadI} = req.body;
-    const newPatente = new Patente({nombreS, nitS, nacionalidadS, paisS, edadS, nombreP, nitP, nacionalidadP, paisP, nombreI, nitI, nacionalidadI, paisI, edadI});
+    const { S, nitS, nacionalidadS, paisS, edadS, P, nitP, nacionalidadP, paisP, edadP, titulo, nitI, nacionalidadI, paisI } = req.body;
+    const newPatente = new Patente({ S, nitS, nacionalidadS, paisS, edadS, nombreP, nitP, nacionalidadP, paisP, edadP, titulo, nitI, nacionalidadI, paisI });
     newPatente.user = req.user.id;
     await newPatente.save();
     req.flash('success_msg', 'Patente creado correctamente');
-    res.redirect('/rol'); 
+    res.redirect('/rol');
+};
+
+actividadesCtrl.verpatentes = async (req, res) => {
+    const actividad = await Patente.find({ user: req.user.id }).sort({ createdAt: 'desc' });
+    const nomAct = "Patentes";
+    res.render('actividades/actividades', { actividad, nomAct });
 };
 
 actividadesCtrl.congreso = async (req, res) => {
@@ -186,12 +222,18 @@ actividadesCtrl.congreso = async (req, res) => {
 };
 
 actividadesCtrl.createCongreso = async (req, res) => {
-    const { nombre, horas, fecha_inicio, fecha_termino, nivel_escolaridad, area_conocimineto, institucion, año} = req.body;
-    const newCongreso = new Congreso({nombre, horas, fecha_inicio, fecha_termino, nivel_escolaridad, area_conocimineto, institucion, año});
+    const { titulo, horas, fecha_inicio, fecha_termino, nivel_escolaridad, area_conocimineto, institucion, año } = req.body;
+    const newCongreso = new Congreso({ titulo, horas, fecha_inicio, fecha_termino, nivel_escolaridad, area_conocimineto, institucion, año });
     newCongreso.user = req.user.id;
     await newCongreso.save();
     req.flash('success_msg', 'Congreso creado correctamente');
-    res.redirect('/rol'); 
+    res.redirect('/rol');
+};
+
+actividadesCtrl.vercongresos = async (req, res) => {
+    const actividad = await Congreso.find({ user: req.user.id }).sort({ createdAt: 'desc' });
+    const nomAct = "Congresos";
+    res.render('actividades/actividades', { actividad, nomAct });
 };
 
 actividadesCtrl.curso = async (req, res) => {
@@ -211,12 +253,18 @@ actividadesCtrl.curso = async (req, res) => {
 };
 
 actividadesCtrl.createCurso = async (req, res) => {
-    const { nombre, horas, fecha_inicio, fecha_termino, nivel_escolaridad, area_conocimineto, institucion, año} = req.body;
-    const newCurso = new Curso({nombre, horas, fecha_inicio, fecha_termino, nivel_escolaridad, area_conocimineto, institucion, año});
+    const { titulo, horas, fecha_inicio, fecha_termino, nivel_escolaridad, area_conocimineto, institucion, año } = req.body;
+    const newCurso = new Curso({ titulo, horas, fecha_inicio, fecha_termino, nivel_escolaridad, area_conocimineto, institucion, año });
     newCurso.user = req.user.id;
     await newCurso.save();
     req.flash('success_msg', 'Curso creado correctamente');
-    res.redirect('/rol'); 
+    res.redirect('/rol');
+};
+
+actividadesCtrl.vercursos = async (req, res) => {
+    const actividad = await Curso.find({ user: req.user.id }).sort({ createdAt: 'desc' });
+    const nomAct = "Cursos";
+    res.render('actividades/actividades', { actividad, nomAct });
 };
 
 actividadesCtrl.diplomado = async (req, res) => {
@@ -236,12 +284,18 @@ actividadesCtrl.diplomado = async (req, res) => {
 };
 
 actividadesCtrl.createDiplomado = async (req, res) => {
-    const { nombre, horas, fecha_inicio, fecha_termino, nivel_escolaridad, area_conocimineto, institucion, año} = req.body;
-    const newDiplomado = new Diplomado({nombre, horas, fecha_inicio, fecha_termino, nivel_escolaridad, area_conocimineto, institucion, año});
+    const { titulo, horas, fecha_inicio, fecha_termino, nivel_escolaridad, area_conocimineto, institucion, año } = req.body;
+    const newDiplomado = new Diplomado({ titulo, horas, fecha_inicio, fecha_termino, nivel_escolaridad, area_conocimineto, institucion, año });
     newDiplomado.user = req.user.id;
     await newDiplomado.save();
     req.flash('success_msg', 'Diplomado creado correctamente');
-    res.redirect('/rol'); 
+    res.redirect('/rol');
+};
+
+actividadesCtrl.verdiplomados = async (req, res) => {
+    const actividad = await Diplomado.find({ user: req.user.id }).sort({ createdAt: 'desc' });
+    const nomAct = "Diplomados";
+    res.render('actividades/actividades', { actividad, nomAct });
 };
 
 module.exports = actividadesCtrl;

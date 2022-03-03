@@ -1,7 +1,7 @@
 const {Schema, model} = require('mongoose');
 
 const CursoSchema = new Schema({
-    nombre: {
+    titulo: {
         type: String,
         required:true
     },

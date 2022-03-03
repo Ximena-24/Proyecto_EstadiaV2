@@ -1,17 +1,15 @@
 <!-- pricing section starts  -->
 <section class="pricing services" id="pricing">
-    <h1 class="heading">Formación <span> académica</span> </h1>
+    <h1 class="heading">Todas las <span>actividades</span> </h1>
     <div class="box-contanier">
 
         <div class="box">
             <span class="fas fa-graduation-cap"></span>
             <div class="container">
-
-                <a href="/dato/AllDatos" class="btn">Agregar</a>
-                <a href="/rol" class="btn">Volver</a>
+                 <a href="/rol" class="btn">Volver</a>
             </div>
 
-            <h3>Grados académicos</h3>
+            <h3>{{nomAct}}</h3>
 
             <table class="resp">
                 <thead>
@@ -23,13 +21,7 @@
                             <h1>Título</h1>
                         </th>
                         <th scope="col">
-                            <h1>Institución</h1>
-                        </th>
-                        <th scope="col">
-                            <h1>País</h1>
-                        </th>
-                        <th scope="col">
-                            <h1>Fecha de obtención</h1>
+                            <h1>Fecha de registro</h1>
                         </th>
                         <th scope="col">
                             <h1>Acciones</h1>
@@ -38,29 +30,21 @@
                 </thead>
                 <tbody>
 
-                    {{#each academicos}}
+                    {{#each actividad}}
 
                     <tr>
                         <th scope="row">{{@index}}</th>
                         <td>
-                            {{tipo}}
+                            {{titulo}}
+                        </td>
+ 
+                        <td>
+                            {{createdAt}}
                         </td>
 
                         <td>
-                            {{institucion}}
-                        </td>
-
-                        <td>
-                            {{pais}}
-                        </td>
-
-                        <td>
-                            {{fecha_inicio}}
-                        </td>
-
-                        <td>
-                            <abbr title="Editar"><a href="#" class="btn"><i class="fas fa-edit"></i></a></abbr>
-                            <abbr title="Eliminar"><a href="#" class="btn"><i class="fas fa-trash-alt"></i></a></abbr>
+                            <a href="#" class="btn"><i class="fas fa-edit"></i></a>
+                            <a href="#" class="btn"><i class="fas fa-trash-alt"></i></a>
                         </td>
                     </tr>
 
@@ -69,9 +53,7 @@
                 </tbody>
             </table>
 
-
         </div>
-
 
     </div>
 </section>

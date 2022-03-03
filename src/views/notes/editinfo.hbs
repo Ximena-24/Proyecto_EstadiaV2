@@ -13,7 +13,7 @@
 
                     <div>
                         <form action="/upload" method="POST" enctype="multipart/form-data">
-                    <p>Selecciona si dese cambiar su foto de perfil</p>
+                    <p>Selecciona si desea cambiar su foto de perfil</p>
 
                             <input type="file" name="image" class="box"> 
                             <div class="form-group">
@@ -32,21 +32,21 @@
         <form action="/info/edit/{{user.id}}?_method=PUT" method="POST" style="background-color:#fff;">
             <h3 class="text-center">Editar Datos</h3>
 
-            <h4>Nombre Completo</h4>
+            <h4>Nombre completo</h4>
             <input type="text" placeholder="" class="box" value="{{user.name}}" readonly>
-            <h4>Correo Institucional</h4>
+            <h4>Correo institucional</h4>
             <input type="text" placeholder="" class="box" value="{{user.email}}" readonly>
-            <h4>Direccion</h4>
+            <h4>Dirección</h4>
             <input type="text" placeholder="" class="box" value="{{user.direccion}}" name="direccion">
             <h4>Puesto</h4>
             <input type="text" placeholder="" class="box" value="{{user.rango}}" readonly>
-            <h4>Telefono</h4>
+            <h4>Teléfono</h4>
             <input type="text" placeholder="" class="box" value="{{user.telefono}}" name="telefono">
-            <h4>Fecha de Ingreso</h4>
+            <h4>Fecha de ingreso</h4>
             <input type="text" placeholder="" class="box" value="{{user.createdAt}}" readonly>
-            <h4>Nivel Academico</h4>
+            <h4>Nivel académico</h4>
             <input type="text" placeholder="" class="box" value="{{user.nivelA}}" readonly>
-            <h4>Nivel Investigacion</h4>
+            <h4>Nivel investigación</h4>
             <input type="text" placeholder="" class="box" value="{{user.nivelI}}" readonly>
 
             <div>

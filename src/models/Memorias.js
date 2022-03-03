@@ -5,7 +5,7 @@ const MemoriaSchema = new Schema({
         type: String,
         required:true
     },
-    titulo_libro: {
+    titulo: {
         type: String,
         required:true
     },
