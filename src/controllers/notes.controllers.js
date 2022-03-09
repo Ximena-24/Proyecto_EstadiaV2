@@ -5,8 +5,17 @@ const Note = require('../models/Note');
 const User = require('../models/User')
 
 const Academico = require('../models/Academico')
-
 const ExpLab = require('../models/ExpLab')
+
+const Articulo = require('../models/Articulo')
+const Libro = require('../models/Libro')
+const CapLibro = require('../models/Capitulo_Libro')
+const ReporteTec = require('../models/Reporte_Tecnico')
+const Memoria = require('../models/Memorias')
+const Congreso = require('../models/Congreso')
+const Curso = require('../models/Curso')
+const Diplomado = require('../models/Diplomado')
+const Patente = require('../models/Patente')
 
 notasCtrl.renderNoteForm = (req, res) => {
     res.render('notes/newnote');
@@ -102,8 +111,16 @@ notasCtrl.updateInfo = async (req, res) => {
 
 
 notasCtrl.renderimp = async (req, res) => {
-    const notes = await Note.find({ user: req.user.id }).sort({ createdAt: 'desc' });
-    res.render('notes/impnotes', { notes });
+    const actividad = await Articulo.find({ user: req.user.id }).sort({ createdAt: 'desc' });
+    const libro = await Libro.find({ user: req.user.id }).sort({ createdAt: 'desc' });
+    const caplibro = await CapLibro.find({ user: req.user.id }).sort({ createdAt: 'desc' });
+    const reportetec = await ReporteTec.find({ user: req.user.id }).sort({ createdAt: 'desc' });
+    const memoria = await Memoria.find({ user: req.user.id }).sort({ createdAt: 'desc' });
+    const patente = await Patente.find({ user: req.user.id }).sort({ createdAt: 'desc' });
+    const congreso = await Congreso.find({ user: req.user.id }).sort({ createdAt: 'desc' });
+    const curso = await Curso.find({ user: req.user.id }).sort({ createdAt: 'desc' });
+    const diplomado = await Diplomado.find({ user: req.user.id }).sort({ createdAt: 'desc' });
+    res.render('notes/impnotes', { actividad, libro, caplibro, reportetec, memoria, patente, congreso, curso, diplomado });
 };
 
 const PDFDocument = require('pdfkit');
@@ -120,7 +137,7 @@ notasCtrl.curri = (req, res) => {
     pdfDoc.text('se trata de:' + description);
     pdfDoc.end();
 
-    req.flash('success_msg', 'Curriculum generado exitosamente');
+    req.flash('success_msg', 'Currículum generado exitosamente');
     res.redirect('/rol');
 
 };
@@ -165,14 +182,30 @@ notasCtrl.renderPerNotes = async (req, res) => {
 
     if (req.user.rango === "Director") {
         const user = await User.findById(req.params.id);
-        const notes = await Note.find({ user: req.params.id }).sort({ createdAt: 'desc' });
-        res.render('notes/notes_personal', { user, notes });
+        const actividad = await Articulo.find({ user: req.params.id }).sort({ createdAt: 'desc' });
+        const libro = await Libro.find({ user: req.params.id }).sort({ createdAt: 'desc' });
+        const caplibro = await CapLibro.find({ user: req.params.id }).sort({ createdAt: 'desc' });
+        const reportetec = await ReporteTec.find({ user: req.params.id }).sort({ createdAt: 'desc' });
+        const memoria = await Memoria.find({ user: req.params.id }).sort({ createdAt: 'desc' });
+        const patente = await Patente.find({ user: req.params.id }).sort({ createdAt: 'desc' });
+        const congreso = await Congreso.find({ user: req.params.id }).sort({ createdAt: 'desc' });
+        const curso = await Curso.find({ user: req.params.id }).sort({ createdAt: 'desc' });
+        const diplomado = await Diplomado.find({ user: req.params.id }).sort({ createdAt: 'desc' });
+        res.render('notes/notes_personal', { user, actividad, libro, caplibro, reportetec, memoria, patente, congreso, curso, diplomado });
     }
 
     if (req.user.rango === "Admin") {
         const user = await User.findById(req.params.id);
-        const notes = await Note.find({ user: req.params.id }).sort({ createdAt: 'desc' });
-        res.render('notes/notes_personal', { user, notes });
+        const actividad = await Articulo.find({ user: req.params.id }).sort({ createdAt: 'desc' });
+        const libro = await Libro.find({ user: req.params.id }).sort({ createdAt: 'desc' });
+        const caplibro = await CapLibro.find({ user: req.params.id }).sort({ createdAt: 'desc' });
+        const reportetec = await ReporteTec.find({ user: req.params.id }).sort({ createdAt: 'desc' });
+        const memoria = await Memoria.find({ user: req.params.id }).sort({ createdAt: 'desc' });
+        const patente = await Patente.find({ user: req.params.id }).sort({ createdAt: 'desc' });
+        const congreso = await Congreso.find({ user: req.params.id }).sort({ createdAt: 'desc' });
+        const curso = await Curso.find({ user: req.params.id }).sort({ createdAt: 'desc' });
+        const diplomado = await Diplomado.find({ user: req.params.id }).sort({ createdAt: 'desc' });
+        res.render('notes/notes_personal', { user, actividad, libro, caplibro, reportetec, memoria, patente, congreso, curso, diplomado });
     }
 };
 
@@ -295,7 +328,7 @@ notasCtrl.createAcademiForm = async (req, res) => {
     const newAcademico = new Academico({ tipo, carrera, institucion, fecha_inicio, fecha_termino, pais });
     newAcademico.user = req.user.id;
     await newAcademico.save();
-    req.flash('success_msg', 'Dato Academico creado correctamente');
+    req.flash('success_msg', 'Dato creado correctamente');
     res.redirect('/dato/Academic');
 };
 
@@ -357,7 +390,7 @@ notasCtrl.upload = async (req, res) => {
     user.size = req.file.size;
 
     await user.save();
-    req.flash('success_msg', 'Foto actualizada exitosatamente');
+    req.flash('success_msg', 'Foto actualizada exitosamente');
     res.render('notes/editinfo', { user });
 };
 

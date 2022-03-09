@@ -15,7 +15,7 @@
     box-sizing: border-box;
     outline: none; border:none;
     text-decoration: none;
-    text-transform: capitalize;
+    text-transform: none;
     transition: .2s linear;
 }
 
@@ -558,7 +558,7 @@ section{
 
 .home .slide .content h3 {
   font-size: 5rem;
-  text-transform: capitalize;
+  text-transform: none;
   color: #444;
   color: #fff;
 }
@@ -629,7 +629,6 @@ section{
   
   .account-form form h3 {
     font-size: 2.5rem;
-    text-transform: capitalize;
     color: #444;
     padding-bottom: .5rem;
     text-transform: uppercase;
@@ -741,7 +740,7 @@ section{
   
   .footer2 .box-container2 .box h3 {
     font-size: 2.2rem;
-    text-transform: capitalize;
+    text-transform: none;
     color: #444;
     padding: 1rem 0;
   }
@@ -793,7 +792,7 @@ section{
     margin-top: 3rem;
     padding-top: 3rem;
     font-size: 2rem;
-    text-transform: capitalize;
+    text-transform: none;
     color: #444;
   
   }
@@ -833,7 +832,7 @@ section{
   
   .subjects .box-container .box h3 {
     font-size: 1.7rem;
-    text-transform: capitalize;
+    text-transform: none;
     color: #444;
     padding: .5rem 0;
   }
@@ -870,13 +869,6 @@ section{
 .subjects .box-container .box img {
   height: 10rem;
   margin-bottom: .7rem;
-}
-
-.subjects .box-container .box h3 {
-  font-size: 1.7rem;
-  text-transform: capitalize;
-  color: #444;
-  padding: .5rem 0;
 }
 
 .subjects .box-container .box p {
@@ -921,7 +913,7 @@ section{
 
 .contact .icons-container .icons h3 {
   font-size: 2rem;
-  text-transform: capitalize;
+  text-transform: none;
   color: #444;
   padding: .5rem 0;
 }
@@ -963,7 +955,7 @@ section{
 
 .contact .row form h3 {
   font-size: 2.5rem;
-  text-transform: capitalize;
+  text-transform: none;
   color: #444;
   padding-bottom: 1rem;
 }
@@ -1119,7 +1111,7 @@ section{
 
 .home-courses .slide .image h3 {
   font-size: 2rem;
-  text-transform: capitalize;
+  text-transform: none;
   color: #444;
 }
 
@@ -1134,7 +1126,7 @@ section{
 
 .home-courses .slide .content h3 {
   font-size: 2rem;
-  text-transform: capitalize;
+  text-transform: none;
   color: #444;
   color: #fff;
 }
@@ -1203,7 +1195,7 @@ section{
 
 .teachers .slide .content h3 {
   font-size: 2rem;
-  text-transform: capitalize;
+  text-transform: none;
   color: #444;
 }
 
@@ -1575,4 +1567,240 @@ h2{
 
 .tabladiseño{
   background-color: white;
+}
+
+/*==================== REUSABLE CSS CLASSES ====================*/
+.seccion{
+  padding: 2rem 0 4rem;
+}
+
+.seccion__title{
+  font-size: 1.5rem;
+}
+
+.seccion__subtitle{
+  display: block;
+  font-size: small;
+  margin-bottom:3rem;
+}
+
+.seccion__title,
+.seccion__subtitle{
+  text-align: center;
+}
+
+/*==================== LAYOUT ====================*/
+.container2{
+  max-width: 768px;
+  margin-left: 1.5rem;
+  margin-right: 1.5rem
+}
+
+.grid{
+  display: grid;
+  gap: 1.5rem;
+}
+
+/* Active link */
+.active-link{
+  color: var(--bg-color-1);
+}
+
+/*==================== SKILLS ====================*/
+.skills_container{
+  row-gap: 0;
+}
+
+.skills__header{
+  display: flex;
+  align-items: center;
+  margin-top: 2.5rem;
+  cursor: pointer;
+  background: var(--main-color);
+  padding: 2rem;
+}
+
+.skills__icon,
+.skills__arrow{
+  font-size: 2rem;
+  color: var(--bg-color-1);
+}
+
+.skills__icon{
+  margin-right: 0.75rem;
+}
+
+.skills__title{
+  font-size: 1.125rem;
+}
+
+.skills__subtitle{
+  font-size: 0.813rem;
+  color: var(--text-color-2);
+}
+
+.skills__arrow{
+  margin-left: auto;
+  transition: .4s;
+}
+
+.skills__list{
+  row-gap: 1.5rem;
+}
+
+.skills__titles{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
+.skills__name{
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.skills__bar,
+.skills__percentage{
+  height: 5px;
+  border-radius: .25rem;
+}
+
+.skills__bar{
+  background-color: var(--text-color-2);
+}
+
+.skills__percentage{
+  display: block;
+  background-color: var(--bg-color-1);
+}
+
+.skills__html{
+  width: 90%;
+}
+.skills__css{
+  width: 80%;
+}
+.skills__js{
+  width: 60%;
+}
+.skills__react{
+  width: 85%;
+}
+
+
+.skills__php{
+  width: 80%;
+}
+.skills__node{
+  width: 70%;
+}
+.skills__firebase{
+  width: 90%;
+}
+.skills__python{
+  width: 55%;
+}
+
+.skills__figma{
+  width: 90%;
+}
+.skills__sketch{
+  width: 85%;
+}
+.skills__photoshop{
+  width: 85%;
+}
+
+.skills__close .skills__list{
+  height: 0;
+  overflow: hidden;
+}
+
+.skills__open .skills__list{
+  height: max-content;
+  margin-bottom: 2.5rem;
+}
+
+.skills__open .skills__arrow{
+  transform: rotate(-180deg);
+}
+
+/*========== SCROLL UP ==========*/
+.scrollup{
+  position: fixed;
+  right: 1rem;
+  bottom: -20%;
+  background-color: var(--bg-color-1);
+  opacity: .8;
+  padding: 0 .3rem;
+  border-radius: .4rem;
+  z-index: 10;
+  transition: .4s;
+}
+
+.scrollup:hover{
+  background-color: var(--bg-color-2);
+}
+
+.scrollup__icon{
+  font-size: 1.5rem;
+  color: #FFF;
+}
+
+/* Show scroll */
+.show-scroll{
+  bottom: 5rem;
+}
+
+/*==================== MEDIA QUERIES ====================*/
+/* For small devices */
+@media screen and (max-width: 350px){
+  .container2{
+      margin-left: 1rem;
+      margin-right: 1rem;
+  }
+
+  .skills__title{
+      font-size: 1rem;
+  }
+
+}
+
+/* For medium devices */
+@media screen and (min-width: 568px){
+
+  .skills__container{
+      grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .container2{
+      margin-left: auto;
+      margin-right: auto;
+  }
+
+  .seccion{
+      padding: 6rem 0 2rem;
+  }
+  .seccion__subtitle{
+      margin-bottom: 4rem;
+  }
+
+  .main{
+      padding: 0 1rem;
+  }
+}
+@media screen and (max-width: 800px) {
+  
+  .skills__container{
+    grid-template-columns: repeat(1, 1fr);
+}
+}
+
+/* For large devices */
+@media screen and (min-width: 1024px){
+  .main{
+      padding: 0;
+  }
 }

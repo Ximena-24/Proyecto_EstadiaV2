@@ -6,101 +6,530 @@
         <div class="box">
             <span class="fas fa-print"></span>
             <div class="container">
-
                 <a href="javascript:history.back()" class="btn m-2">Volver</a>
             </div>
 
             <h3>Reportes actuales</h3>
+            <div class="skills__container container2 grid">
+                <div>
+                    <!--==================== SKILLS 1 ====================-->
+                    <div class="skills__content skills__open">
+                        <div class="skills__header">
 
-            <table class="resp">
-                <thead>
-                    <tr class="tablacolor">
-                        <th scope="col">
-                            <h1>#</h1>
-                        </th>
-                        <th scope="col">
-                            <h1>Proyecto</h1>
-                        </th>
-                        <th scope="col">
-                            <h1>Descripción</h1>
-                        </th>
-                        <th scope="col">
-                            <h1>Acciones</h1>
-                        </th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {{#each notes}}
+                            <div>
+                                <h1>Artículos</h1>
+                            </div>
 
-                    <tr>
-                        <th scope="row">{{@index}}</th>
-                        <td>{{title}}</td>
-                        <td>{{description}}</td>
-                        <td>
-                            <a href="#" class="btn">Imprimir Reporte</a>
-                        </td>
-                    </tr>
+                            <i class="fas fa-angle-down skills__arrow"></i>
+                        </div>
 
-                    {{/each}}
+                        <div class="skills__list grid">
+                            <table>
+                                <thead>
+                                    <tr class="tablacolor">
+                                        <th scope="col">
+                                            <h1 class="skills__title">N.</h1>
+                                        </th>
+                                        <th scope="col">
+                                            <h1 class="skills__title">Título</h1>
+                                        </th>
+                                        <th scope="col">
+                                            <h1 class="skills__title">Fecha de registro</h1>
+                                        </th>
+                                        <th scope="col">
+                                            <h1 class="skills__title">Acciones</h1>
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
 
-                </tbody>
-            </table>
+                                    {{#each actividad}}
+
+                                    <tr>
+                                        <th scope="row">{{@index}}</th>
+                                        <td>
+                                            {{title}}
+                                        </td>
+
+                                        <td>
+                                            {{createdAt}}
+                                        </td>
+
+                                        <td>
+                                            <a href="#" class="btn"><i class="fas fa-edit"></i></a>
+                                            <a href="#" class="btn"><i class="fas fa-trash-alt"></i></a>
+                                        </td>
+                                    </tr>
+
+                                    {{/each}}
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <!--==================== SKILLS 2 ====================-->
+                    <div class="skills__content skills__close">
+                        <div class="skills__header">
+
+                            <div>
+                                <h1>Libros</h1>
+                            </div>
+
+                            <i class="fas fa-angle-down skills__arrow"></i>
+
+                        </div>
+
+                        <div class="skills__list grid">
+                            <table>
+                                <thead>
+                                    <tr class="tablacolor">
+                                        <th scope="col">
+                                            <h1 class="skills__title">N.</h1>
+                                        </th>
+                                        <th scope="col">
+                                            <h1 class="skills__title">Título</h1>
+                                        </th>
+                                        <th scope="col">
+                                            <h1 class="skills__title">Fecha de registro</h1>
+                                        </th>
+                                        <th scope="col">
+                                            <h1 class="skills__title">Acciones</h1>
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+
+                                    {{#each libro}}
+
+                                    <tr>
+                                        <th scope="row">{{@index}}</th>
+                                        <td>
+                                            {{title}}
+                                        </td>
+
+                                        <td>
+                                            {{createdAt}}
+                                        </td>
+
+                                        <td>
+                                            <a href="#" class="btn"><i class="fas fa-edit"></i></a>
+                                            <a href="#" class="btn"><i class="fas fa-trash-alt"></i></a>
+                                        </td>
+                                    </tr>
+
+                                    {{/each}}
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <!--==================== SKILLS 3 ====================-->
+                    <div class="skills__content skills__close">
+                        <div class="skills__header">
+
+                            <div>
+                                <h1>Capítulos de libros</h1>
+                            </div>
+
+                            <i class="fas fa-angle-down skills__arrow"></i>
+
+                        </div>
+
+                        <div class="skills__list grid">
+                            <table  >
+                                <thead>
+                                    <tr class="tablacolor">
+                                        <th scope="col">
+                                            <h1 class="skills__title">N.</h1>
+                                        </th>
+                                        <th scope="col">
+                                            <h1 class="skills__title">Título</h1>
+                                        </th>
+                                        <th scope="col">
+                                            <h1 class="skills__title">Fecha de registro</h1>
+                                        </th>
+                                        <th scope="col">
+                                            <h1 class="skills__title">Acciones</h1>
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+
+                                    {{#each caplibro}}
+
+                                    <tr>
+                                        <th scope="row">{{@index}}</th>
+                                        <td>
+                                            {{title}}
+                                        </td>
+
+                                        <td>
+                                            {{createdAt}}
+                                        </td>
+
+                                        <td>
+                                            <a href="#" class="btn"><i class="fas fa-edit"></i></a>
+                                            <a href="#" class="btn"><i class="fas fa-trash-alt"></i></a>
+                                        </td>
+                                    </tr>
+
+                                    {{/each}}
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <!--==================== SKILLS 4 ====================-->
+                    <div class="skills__content skills__close">
+                        <div class="skills__header">
+
+                            <div>
+                                <h1>Reportes Técnicos</h1>
+                            </div>
+
+                            <i class="fas fa-angle-down skills__arrow"></i>
+
+                        </div>
+
+                        <div class="skills__list grid">
+                            <table  >
+                                <thead>
+                                    <tr class="tablacolor">
+                                        <th scope="col">
+                                            <h1 class="skills__title">N.</h1>
+                                        </th>
+                                        <th scope="col">
+                                            <h1 class="skills__title">Título</h1>
+                                        </th>
+                                        <th scope="col">
+                                            <h1 class="skills__title">Fecha de registro</h1>
+                                        </th>
+                                        <th scope="col">
+                                            <h1 class="skills__title">Acciones</h1>
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+
+                                    {{#each reportestec}}
+
+                                    <tr>
+                                        <th scope="row">{{@index}}</th>
+                                        <td>
+                                            {{title}}
+                                        </td>
+
+                                        <td>
+                                            {{createdAt}}
+                                        </td>
+
+                                        <td>
+                                            <a href="#" class="btn"><i class="fas fa-edit"></i></a>
+                                            <a href="#" class="btn"><i class="fas fa-trash-alt"></i></a>
+                                        </td>
+                                    </tr>
+
+                                    {{/each}}
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <!--==================== SKILLS 5 ====================-->
+                    <div class="skills__content skills__close">
+                        <div class="skills__header">
+
+                            <div>
+                                <h1>Memorias</h1>
+                            </div>
+
+                            <i class="fas fa-angle-down skills__arrow"></i>
+                        </div>
+
+                        <div class="skills__list grid">
+                            <table>
+                                <thead>
+                                    <tr class="tablacolor">
+                                        <th scope="col">
+                                            <h1 class="skills__title">N.</h1>
+                                        </th>
+                                        <th scope="col">
+                                            <h1 class="skills__title">Título</h1>
+                                        </th>
+                                        <th scope="col">
+                                            <h1 class="skills__title">Fecha de registro</h1>
+                                        </th>
+                                        <th scope="col">
+                                            <h1 class="skills__title">Acciones</h1>
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+
+                                    {{#each memoria}}
+
+                                    <tr>
+                                        <th scope="row">{{@index}}</th>
+                                        <td>
+                                            {{title}}
+                                        </td>
+
+                                        <td>
+                                            {{createdAt}}
+                                        </td>
+
+                                        <td>
+                                            <a href="#" class="btn"><i class="fas fa-edit"></i></a>
+                                            <a href="#" class="btn"><i class="fas fa-trash-alt"></i></a>
+                                        </td>
+                                    </tr>
+
+                                    {{/each}}
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <!--==================== SKILLS 6 ====================-->
+                    <div class="skills__content skills__close">
+                        <div class="skills__header">
+
+                            <div>
+                                <h1>Patentes</h1>
+                            </div>
+
+                            <i class="fas fa-angle-down skills__arrow"></i>
+
+                        </div>
+
+                        <div class="skills__list grid">
+                            <table>
+                                <thead>
+                                    <tr class="tablacolor">
+                                        <th scope="col">
+                                            <h1 class="skills__title">N.</h1>
+                                        </th>
+                                        <th scope="col">
+                                            <h1 class="skills__title">Título</h1>
+                                        </th>
+                                        <th scope="col">
+                                            <h1 class="skills__title">Fecha de registro</h1>
+                                        </th>
+                                        <th scope="col">
+                                            <h1 class="skills__title">Acciones</h1>
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+
+                                    {{#each patente}}
+
+                                    <tr>
+                                        <th scope="row">{{@index}}</th>
+                                        <td>
+                                            {{title}}
+                                        </td>
+
+                                        <td>
+                                            {{createdAt}}
+                                        </td>
+
+                                        <td>
+                                            <a href="#" class="btn"><i class="fas fa-edit"></i></a>
+                                            <a href="#" class="btn"><i class="fas fa-trash-alt"></i></a>
+                                        </td>
+                                    </tr>
+
+                                    {{/each}}
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <!--==================== SKILLS 7 ====================-->
+                    <div class="skills__content skills__close">
+                        <div class="skills__header">
+
+                            <div>
+                                <h1>Congresos</h1>
+                            </div>
+
+                            <i class="fas fa-angle-down skills__arrow"></i>
+
+                        </div>
+
+                        <div class="skills__list grid">
+                            <table  >
+                                <thead>
+                                    <tr class="tablacolor">
+                                        <th scope="col">
+                                            <h1 class="skills__title">N.</h1>
+                                        </th>
+                                        <th scope="col">
+                                            <h1 class="skills__title">Título</h1>
+                                        </th>
+                                        <th scope="col">
+                                            <h1 class="skills__title">Fecha de registro</h1>
+                                        </th>
+                                        <th scope="col">
+                                            <h1 class="skills__title">Acciones</h1>
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+
+                                    {{#each congreso}}
+
+                                    <tr>
+                                        <th scope="row">{{@index}}</th>
+                                        <td>
+                                            {{title}}
+                                        </td>
+
+                                        <td>
+                                            {{createdAt}}
+                                        </td>
+
+                                        <td>
+                                            <a href="#" class="btn"><i class="fas fa-edit"></i></a>
+                                            <a href="#" class="btn"><i class="fas fa-trash-alt"></i></a>
+                                        </td>
+                                    </tr>
+
+                                    {{/each}}
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <!--==================== SKILLS 8 ====================-->
+                    <div class="skills__content skills__close">
+                        <div class="skills__header">
+
+                            <div>
+                                <h1>Cursos</h1>
+                            </div>
+
+                            <i class="fas fa-angle-down skills__arrow"></i>
+
+                        </div>
+
+                        <div class="skills__list grid">
+                            <table  >
+                                <thead>
+                                    <tr class="tablacolor">
+                                        <th scope="col">
+                                            <h1 class="skills__title">N.</h1>
+                                        </th>
+                                        <th scope="col">
+                                            <h1 class="skills__title">Título</h1>
+                                        </th>
+                                        <th scope="col">
+                                            <h1 class="skills__title">Fecha de registro</h1>
+                                        </th>
+                                        <th scope="col">
+                                            <h1 class="skills__title">Acciones</h1>
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+
+                                    {{#each curso}}
+
+                                    <tr>
+                                        <th scope="row">{{@index}}</th>
+                                        <td>
+                                            {{title}}
+                                        </td>
+
+                                        <td>
+                                            {{createdAt}}
+                                        </td>
+
+                                        <td>
+                                            <a href="#" class="btn"><i class="fas fa-edit"></i></a>
+                                            <a href="#" class="btn"><i class="fas fa-trash-alt"></i></a>
+                                        </td>
+                                    </tr>
+
+                                    {{/each}}
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <!--==================== SKILLS 9 ====================-->
+                    <div class="skills__content skills__close">
+                        <div class="skills__header">
+
+                            <div>
+                                <h1>Diplomados</h1>
+                            </div>
+
+                            <i class="fas fa-angle-down skills__arrow"></i>
+
+                        </div>
+
+                        <div class="skills__list grid">
+                            <table  >
+                                <thead>
+                                    <tr class="tablacolor">
+                                        <th scope="col">
+                                            <h1 class="skills__title">N.</h1>
+                                        </th>
+                                        <th scope="col">
+                                            <h1 class="skills__title">Título</h1>
+                                        </th>
+                                        <th scope="col">
+                                            <h1 class="skills__title">Fecha de registro</h1>
+                                        </th>
+                                        <th scope="col">
+                                            <h1 class="skills__title">Acciones</h1>
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+
+                                    {{#each diplomado}}
+
+                                    <tr>
+                                        <th scope="row">{{@index}}</th>
+                                        <td>
+                                            {{title}}
+                                        </td>
+
+                                        <td>
+                                            {{createdAt}}
+                                        </td>
+
+                                        <td>
+                                            <a href="#" class="btn"><i class="fas fa-edit"></i></a>
+                                            <a href="#" class="btn"><i class="fas fa-trash-alt"></i></a>
+                                        </td>
+                                    </tr>
+
+                                    {{/each}}
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
         </div>
     </div>
 </section>
 <!-- pricing section ends -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div class="jumbotron mt-4">
-    <h1 class="display-4">Curriculum</h1>
-    <hr class="my-4">
-    <a href="javascript:history.back()" class="btn btn-danger m-2">Volver</a>
-
-    <table class="table table-dark table-striped">
-        <thead>
-            <tr>
-                <th scope="col">#</th>
-                <th scope="col">Proyecto</th>
-                <th scope="col">Descripcion</th>
-                <th scope="col">Accion</th>
-            </tr>
-        </thead>
-
-        <tbody>
-
-            {{#each notes}}
-
-            <tr>
-                <form action="/cur/?_method=GET" method="POST">
-                    <input type="hidden" name="_method" value="GET">
-                    <th scope="row">{{1}}</th>
-                    <td><input class="form-control" name="title" value="{{title}}" readonly></td>
-                    <td><input class="form-control" name="description" value="{{description}}" readonly></td>
-                    <td>
-                        <button type="submit" class="btn btn-success btn-block btn-sm">
-                            Imprimir Curriculum
-                        </button>
-                    </td>
-                </form>
-            </tr>
-
-            {{/each}}
-
-        </tbody>
-    </table>
-
-</div>

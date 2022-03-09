@@ -16,7 +16,7 @@ usersCtrl.signup = async (req, res) => {
         errors.push({ text: 'Las contraseñas no coinciden' });
     }
     if (password.length < 4) {
-        errors.push({ text: 'La contraseña debe tener almenos 4 caracteres' });
+        errors.push({ text: 'La contraseña debe tener al menos 4 caracteres' });
     }
     if (errors.length > 0) {
         res.render('users/signup', {
@@ -56,7 +56,7 @@ usersCtrl.signin = passport.authenticate('local', {
 
 usersCtrl.logout = (req, res) => {
     req.logout();
-    req.flash('success_msg', 'Cesion cerrada');
+    req.flash('success_msg', 'Cesión cerrada');
     res.redirect('/');
 }
 

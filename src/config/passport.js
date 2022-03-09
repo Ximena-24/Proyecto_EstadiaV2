@@ -21,11 +21,11 @@ passport.use(new LocalStrategy({
             }
 
             if (user.status === false) {
-                return done(null, false, { message: 'usuario en estado de baja'});
+                return done(null, false, { message: 'Usuario en estado de baja'});
             }
             return done(null, user);
         } else {
-            return done(null, false, { message: 'Constraseña incorrecta' });
+            return done(null, false, { message: 'Contraseña incorrecta' });
         }
     }
 }));
