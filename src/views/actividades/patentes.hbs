@@ -4,7 +4,7 @@
     <div class="box-container">
         <section class="">
             <div class="box">
-                <form action="/actividades/newPatente" method="POST">
+                <form action="/actividades/newPatente" method="POST" enctype="multipart/form-data">
                     <h3 class="centrado">del Mtro. {{user.name}}</h3>
 
                     <table class="tabladiseño">
@@ -91,6 +91,9 @@
 
                         </tbody>
                     </table>
+
+                       <h2 style="color: rgb(88, 151, 88);">Cargar Archivo (Opcional) </h2>
+                    <input type="file" name="image" class="box">
 
                     <div class="centrado">
                         <button class="btn">

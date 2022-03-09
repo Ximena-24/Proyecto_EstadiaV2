@@ -6,7 +6,7 @@
     <div class="box-container">
         <section class="centrado">
             <div class="box">
-                <form action="/actividades/newMemorias" method="POST">
+                <form action="/actividades/newMemorias" method="POST" enctype="multipart/form-data" >
                     <h3>del Mtro. {{user.name}}</h3>
 
                     <h2><strong> ISBN:</strong></h2>
@@ -38,6 +38,9 @@
 
                     <h2><strong> Pagina del Libro:</strong></h2>
                     <input type="numeric" class="box" name="pag_capitulo" required>
+
+                     <h2 style="color: rgb(88, 151, 88);">Cargar Archivo (Opcional) </h2>
+                    <input type="file" name="image" class="box">
 
                     <div>
                         <button class="btn">

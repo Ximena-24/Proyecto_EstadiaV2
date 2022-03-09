@@ -47,6 +47,11 @@ actividadesCtrl.createArticulo = async (req, res) => {
     const { issn, doi, titulo, nom_revista, titulo_revista, fecha_publicacion, area, rol } = req.body;
     const newArticulo = new Articulo({ issn, doi, titulo, nom_revista, titulo_revista, fecha_publicacion, area, rol });
     newArticulo.user = req.user.id;
+    newArticulo.filename = req.file.filename;
+    newArticulo.path = '/img/uploads/' + req.file.filename;
+    newArticulo.originalname = req.file.originalname;
+    newArticulo.mimetype = req.file.mimetype;
+    newArticulo.size = req.file.size;
     await newArticulo.save();
     req.flash('success_msg', 'Articulo creado correctamente');
     res.redirect('/rol');
@@ -77,6 +82,11 @@ actividadesCtrl.createLibro = async (req, res) => {
     const { isbn, titulo, pais, idioma, fecha_publicacion, editorial, edicion } = req.body;
     const newLibro = new Libro({ isbn, titulo, pais, idioma, fecha_publicacion, editorial, edicion });
     newLibro.user = req.user.id;
+    newLibro.filename = req.file.filename;
+    newLibro.path = '/img/uploads/' + req.file.filename;
+    newLibro.originalname = req.file.originalname;
+    newLibro.mimetype = req.file.mimetype;
+    newLibro.size = req.file.size;
     await newLibro.save();
     req.flash('success_msg', 'Libro creado correctamente');
     res.redirect('/rol');
@@ -106,6 +116,13 @@ actividadesCtrl.createCapLibro = async (req, res) => {
     const { isbn, titulo, pais, idioma, fecha_publicacion, editorial, edicion, titulo_capitulo, num_capitulo, pag_Capitulo } = req.body;
     const newCapLibro = new CapLibro({ isbn, titulo, pais, idioma, fecha_publicacion, editorial, edicion, titulo_capitulo, num_capitulo, pag_Capitulo });
     newCapLibro.user = req.user.id;
+
+    newCapLibro.filename = req.file.filename;
+    newCapLibro.path = '/img/uploads/' + req.file.filename;
+    newCapLibro.originalname = req.file.originalname;
+    newCapLibro.mimetype = req.file.mimetype;
+    newCapLibro.size = req.file.size;
+
     await newCapLibro.save();
     req.flash('success_msg', 'Capitulo de libro creado correctamente');
     res.redirect('/rol');
@@ -136,6 +153,13 @@ actividadesCtrl.createreporteTec = async (req, res) => {
     const { titulo, empresa, fecha_entrega, descripcion, objetivos } = req.body;
     const newReporteTec = new ReporteTec({ titulo, empresa, fecha_entrega, descripcion, objetivos });
     newReporteTec.user = req.user.id;
+
+    newReporteTec.filename = req.file.filename;
+    newReporteTec.path = '/img/uploads/' + req.file.filename;
+    newReporteTec.originalname = req.file.originalname;
+    newReporteTec.mimetype = req.file.mimetype;
+    newReporteTec.size = req.file.size;
+
     await newReporteTec.save();
     req.flash('success_msg', 'Reporte tecnico creado correctamente');
     res.redirect('/rol');
@@ -165,6 +189,13 @@ actividadesCtrl.createMemorias = async (req, res) => {
     const { isbn, titulo, pais, idioma, fecha_publicacion, editorial, edicion, titulo_capitulo, num_capitulo, pag_capitulo } = req.body;
     const newMemoria = new Memoria({ isbn, titulo, pais, idioma, fecha_publicacion, editorial, edicion, titulo_capitulo, num_capitulo, pag_capitulo });
     newMemoria.user = req.user.id;
+
+    newMemoria.filename = req.file.filename;
+    newMemoria.path = '/img/uploads/' + req.file.filename;
+    newMemoria.originalname = req.file.originalname;
+    newMemoria.mimetype = req.file.mimetype;
+    newMemoria.size = req.file.size;
+
     await newMemoria.save();
     req.flash('success_msg', 'Memoria creada correctamente');
     res.redirect('/rol');
@@ -196,6 +227,13 @@ actividadesCtrl.createPatente = async (req, res) => {
     const { S, nitS, nacionalidadS, paisS, edadS, P, nitP, nacionalidadP, paisP, edadP, titulo, nitI, nacionalidadI, paisI } = req.body;
     const newPatente = new Patente({ S, nitS, nacionalidadS, paisS, edadS, nombreP, nitP, nacionalidadP, paisP, edadP, titulo, nitI, nacionalidadI, paisI });
     newPatente.user = req.user.id;
+
+    newPatente.filename = req.file.filename;
+    newPatente.path = '/img/uploads/' + req.file.filename;
+    newPatente.originalname = req.file.originalname;
+    newPatente.mimetype = req.file.mimetype;
+    newPatente.size = req.file.size;
+
     await newPatente.save();
     req.flash('success_msg', 'Patente creado correctamente');
     res.redirect('/rol');
@@ -225,6 +263,13 @@ actividadesCtrl.createCongreso = async (req, res) => {
     const { titulo, horas, fecha_inicio, fecha_termino, nivel_escolaridad, area_conocimineto, institucion, año } = req.body;
     const newCongreso = new Congreso({ titulo, horas, fecha_inicio, fecha_termino, nivel_escolaridad, area_conocimineto, institucion, año });
     newCongreso.user = req.user.id;
+
+    newCongreso.filename = req.file.filename;
+    newCongreso.path = '/img/uploads/' + req.file.filename;
+    newCongreso.originalname = req.file.originalname;
+    newCongreso.mimetype = req.file.mimetype;
+    newCongreso.size = req.file.size;
+
     await newCongreso.save();
     req.flash('success_msg', 'Congreso creado correctamente');
     res.redirect('/rol');
@@ -256,6 +301,13 @@ actividadesCtrl.createCurso = async (req, res) => {
     const { titulo, horas, fecha_inicio, fecha_termino, nivel_escolaridad, area_conocimineto, institucion, año } = req.body;
     const newCurso = new Curso({ titulo, horas, fecha_inicio, fecha_termino, nivel_escolaridad, area_conocimineto, institucion, año });
     newCurso.user = req.user.id;
+
+    newCurso.filename = req.file.filename;
+    newCurso.path = '/img/uploads/' + req.file.filename;
+    newCurso.originalname = req.file.originalname;
+    newCurso.mimetype = req.file.mimetype;
+    newCurso.size = req.file.size;
+
     await newCurso.save();
     req.flash('success_msg', 'Curso creado correctamente');
     res.redirect('/rol');
@@ -287,6 +339,13 @@ actividadesCtrl.createDiplomado = async (req, res) => {
     const { titulo, horas, fecha_inicio, fecha_termino, nivel_escolaridad, area_conocimineto, institucion, año } = req.body;
     const newDiplomado = new Diplomado({ titulo, horas, fecha_inicio, fecha_termino, nivel_escolaridad, area_conocimineto, institucion, año });
     newDiplomado.user = req.user.id;
+
+    newDiplomado.filename = req.file.filename;
+    newDiplomado.path = '/img/uploads/' + req.file.filename;
+    newDiplomado.originalname = req.file.originalname;
+    newDiplomado.mimetype = req.file.mimetype;
+    newDiplomado.size = req.file.size;
+
     await newDiplomado.save();
     req.flash('success_msg', 'Diplomado creado correctamente');
     res.redirect('/rol');

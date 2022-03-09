@@ -31,7 +31,7 @@ const {
     createDiplomado,
     verdiplomados
 
-
+    
 } = require('../controllers/actividades.controller');
 
 const {isAuthenticated} = require('../helpers/auth');

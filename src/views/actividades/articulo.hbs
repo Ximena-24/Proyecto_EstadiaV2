@@ -6,7 +6,7 @@
     <div class="box-container">
         <section class="centrado">
             <div class="box">
-                <form action="/actividades/newArticulo" method="POST">
+                <form action="/actividades/newArticulo" method="POST" enctype="multipart/form-data">
                     <h3>del Mtro. {{user.name}}</h3>
 
                     <h2><strong> ISSN:</strong></h2>
@@ -37,7 +37,10 @@
                         <option value="Co-tutor" label="Co-tutor">Co-tutor</option>
                         <option value="Participante" label="Participante">Participante</option>
                     </select>
-
+                    
+                     <h2 style="color: rgb(88, 151, 88);">Cargar Archivo (Opcional) </h2>
+                    <input type="file" name="image" class="box">
+                        
                     <div>
                         <button class="btn">
                             Guardar
