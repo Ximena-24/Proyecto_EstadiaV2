@@ -1821,3 +1821,17 @@ h2{
 .dataTables_paginate{
   margin-top: -4rem;
 }
+
+@media screen and (max-width: 700px) {
+  
+  .skills__container{
+    grid-template-columns: repeat(1, 1fr);
+}
+  .dataTables_filter{
+    width: 100%;
+  }
+  .dataTables_length{
+    width: 100%;
+  }
+
+}
