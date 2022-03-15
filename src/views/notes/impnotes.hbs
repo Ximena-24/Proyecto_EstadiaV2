@@ -1,3 +1,8 @@
+<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+<script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+
+<link href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css" rel="stylesheet"/>
+
 <!-- pricing section starts  -->
 <section class="pricing services" id="pricing">
     <h1 class="heading">Imprimir <span> reportes</span> </h1>
@@ -11,6 +16,7 @@
 
             <h3>Reportes actuales</h3>
             <div class="skills__container container2 grid">
+                
                 <div>
                     <!--==================== SKILLS 1 ====================-->
                     <div class="skills__content skills__open">
@@ -24,7 +30,7 @@
                         </div>
 
                         <div class="skills__list grid">
-                            <table>
+                            <table id="example" class="display" style="width:100%">
                                 <thead>
                                     <tr class="tablacolor">
                                         <th scope="col">
@@ -533,3 +539,9 @@
     </div>
 </section>
 <!-- pricing section ends -->
+
+<script>
+    $(document).ready(function() {
+    $('#example').DataTable();
+} );
+</script>

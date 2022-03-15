@@ -808,7 +808,6 @@ section{
   .subjects .box-container .box {
     padding: 3rem 2rem;
     text-align: center;
-  
     background: #f0fdfa;
     cursor: pointer;
   }
@@ -1770,7 +1769,7 @@ h2{
 @media screen and (min-width: 568px){
 
   .skills__container{
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: repeat(1, 1fr);
   }
 }
 
@@ -1803,4 +1802,22 @@ h2{
   .main{
       padding: 0;
   }
+}
+
+.dataTables_filter{
+  width: 75%;
+  padding: 1rem 3rem;
+}
+.dataTables_length{
+  width: 25%;
+  padding: 1rem 3rem;
+}
+
+.paginate_button{
+  font-size: 1.5rem;
+  padding: 0rem 3rem;
+}
+
+.dataTables_paginate{
+  margin-top: -4rem;
 }
