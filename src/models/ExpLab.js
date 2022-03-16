@@ -6,11 +6,11 @@ const ExpLabSchema = new Schema({
         required: true
     },
     fecha_inicio: {
-        type: Date,
+        type: String,
         required: true
     },
     fecha_termino: {
-        type: Date,
+        type: String,
         required: true
     },
     puesto: {
