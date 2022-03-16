@@ -224,8 +224,8 @@ actividadesCtrl.patentes = async (req, res) => {
 };
 
 actividadesCtrl.createPatente = async (req, res) => {
-    const { S, nitS, nacionalidadS, paisS, edadS, P, nitP, nacionalidadP, paisP, edadP, titulo, nitI, nacionalidadI, paisI } = req.body;
-    const newPatente = new Patente({ S, nitS, nacionalidadS, paisS, edadS, nombreP, nitP, nacionalidadP, paisP, edadP, titulo, nitI, nacionalidadI, paisI });
+    const { S, nitS, nacionalidadS, paisS, edadS, P, nitP, nacionalidadP, paisP, edadP, titulo, nitI, nacionalidadI, paisI,fecha_publicacion } = req.body;
+    const newPatente = new Patente({ S, nitS, nacionalidadS, paisS, edadS, nombreP, nitP, nacionalidadP, paisP, edadP, titulo, nitI, nacionalidadI, paisI, fecha_publicacion });
     newPatente.user = req.user.id;
 
     newPatente.filename = req.file.filename;
