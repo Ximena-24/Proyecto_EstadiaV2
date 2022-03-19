@@ -1,0 +1,48 @@
+<section class="contact services">
+     <h1 class="heading">Agregar<span> Participacion en Eventos</span></h1>
+
+    <div class="box-container">
+        <section class="centrado">
+            <div class="box">
+                <form action="/notes/newacademico" method="POST">
+                    <h2>Participacion en Eventos</h2>
+                    <h1>Mtro. {{user.name}}</h1>
+                    <br>
+
+                    <h2><strong>Seleccionar un Tipo:</strong></h2>
+                    <select value="tipo" value="{{tipo}}" name="tipo">
+                        <option value="">Seleccionar un Tipo</option>
+                        <option value="Curso" label="Curso">Curso</option>
+                        <option value="Taller" label="Taller">Taller</option>
+                        <option value="Diplomado" label="Diplomado">Conferencia</option>
+                        <option value="Diplomado" label="Diplomado">Evaluacion</option>
+                        <option value="Otro" label="Otro">Otro</option>
+                    </select>
+
+                    <h2><strong>Nombre:</strong></h2>
+                    <input type="text" class="box" name="carrera" required>
+
+                    <h2><strong>Institución Impartida:</strong></h2>
+                    <input type="text" class="box" name="institucion" required>
+
+                    <h2><strong> Fecha:</strong></h2>
+                    <input type="date" class="box" name="fecha_inicio" required>
+
+                   
+                         <h2 style="color: rgb(88, 151, 88);">Cargar Archivo</h2>
+                         <input type="file" name="image" class="box">
+
+            <div>
+               <button class="btn">
+                     Guardar
+                </button>
+                    <a href="javascript:history.back()" class="btn">Volver</a>
+            </div>
+
+         </form>
+        </div>
+    </section>
+
+    </div>
+</section>
+

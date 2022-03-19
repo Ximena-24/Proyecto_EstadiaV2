@@ -365,7 +365,6 @@ notasCtrl.renderAllExperiencia = async (req, res) => {
         res.render('administrador/index_administrador');
 
     }
-
 };
 
 notasCtrl.createExpLabForm = async (req, res) => {
@@ -400,4 +399,53 @@ notasCtrl.renderimage = async (req, res) => {
     res.render('notes/profile', { user });
 };
 
+notasCtrl. capacitacionOrg = async (req, res) => {
+
+    if (req.user.rango === "Maestro") {
+        res.render('actividades/capacitacion_org');
+    }
+
+    if (req.user.rango === "Director") {
+        res.render('actividades/capacitacion_org');
+    }
+
+    if (req.user.rango === "Admin") {
+        res.render('administrador/index_administrador');
+
+    }
+};
+
+notasCtrl.participacionEve = async (req, res) => {
+
+    if (req.user.rango === "Maestro") {
+        res.render('actividades/participar_even');
+    }
+
+    if (req.user.rango === "Director") {
+        res.render('actividades/participar_even');
+    }
+
+    if (req.user.rango === "Admin") {
+        res.render('administrador/index_administrador');
+
+    }
+};
+
+notasCtrl.renderNuevas = async (req, res) => {
+
+    if (req.user.rango === "Maestro") {
+        res.render('actividades/agregar_nuevas');
+    }
+
+    if (req.user.rango === "Director") {
+        res.render('actividades/agregar_nuevas');
+    }
+
+    if (req.user.rango === "Admin") {
+        res.render('administrador/index_administrador');
+
+    }
+};
+
+ 
 module.exports = notasCtrl;

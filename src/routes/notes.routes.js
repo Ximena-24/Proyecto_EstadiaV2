@@ -29,9 +29,11 @@ const {
     upload, 
     renderimage,
     createAcademiForm,
-    createExpLabForm
+    createExpLabForm,
+    capacitacionOrg,
+    participacionEve,
+    renderNuevas
     
-
 
 
 } = require('../controllers/notes.controllers');
@@ -100,5 +102,11 @@ router.get('/dato/Experience', isAuthenticated, renderExperiLavo);
 router.get('/dato/AllExperie', isAuthenticated, renderAllExperiencia);
 
 router.post('/notes/newExpLab', isAuthenticated, createExpLabForm); 
+
+router.get('/actividades/capacitacion', isAuthenticated,  capacitacionOrg); 
+
+router.get('/actividades/Participar', isAuthenticated,  participacionEve); 
+
+router.get('/actividades/NuevasActividades', isAuthenticated, renderNuevas); 
 
 module.exports = router; 

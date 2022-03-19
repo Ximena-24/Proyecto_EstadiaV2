@@ -357,4 +357,5 @@ actividadesCtrl.verdiplomados = async (req, res) => {
     res.render('actividades/actividades', { actividad, nomAct });
 };
 
+
 module.exports = actividadesCtrl;

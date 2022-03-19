@@ -74,4 +74,7 @@ router.get('/actividades/diplomado', isAuthenticated, diplomado);
 router.post('/actividades/newDiplomado', isAuthenticated, createDiplomado); 
 router.get('/actividades/diplomados', isAuthenticated, verdiplomados); 
 
+
+
+
 module.exports = router; 
