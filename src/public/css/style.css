@@ -278,13 +278,24 @@ section{
 }
 
 .gallery .box-container .box{
-    height: 25rem;
-    border-radius: .5rem;
-    overflow: hidden;
-    border:1rem solid var(--bg-color-2);
-    box-shadow: var(--box-shadow);
-    position: relative;
-    cursor: pointer;
+  height: 25rem;
+  border-radius: .5rem;
+  overflow: hidden;
+  border:1rem solid var(--bg-color-2);
+  box-shadow: var(--box-shadow);
+  position: relative;
+  cursor: pointer;
+}
+
+.boxSel{
+  background-color: var(--bg-color-2);
+  border-radius: .5rem;
+  overflow: hidden;
+  border:1rem solid var(--bg-color-2);
+  box-shadow: var(--box-shadow);
+  position: relative;
+  cursor: pointer;
+  padding-top: 2rem;
 }
 
 .gallery .box-container .box img{
@@ -1749,6 +1760,16 @@ h2{
 /* Show scroll */
 .show-scroll{
   bottom: 5rem;
+}
+
+.desp {
+  border: 5px solid #333333;
+  overflow-x: scroll;
+}
+
+.resp2{
+  font-size: 1rem;
+  height: auto;
 }
 
 /*==================== MEDIA QUERIES ====================*/

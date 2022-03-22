@@ -1,6 +1,13 @@
 <section class="gallery services" id="gallery">
+
     <h1 class="heading">Selección<span> de personal</span> </h1>
+
+    <div class="container centrado">
+        <a href="/rol" class="btn centrado">Volver</a>
+    </div><br>
+
     <div class="box-container">
+
         <div class="box">
             <img src="/img/utna.jpg" alt="">
             <div class="content">
@@ -17,11 +24,37 @@
                 <a href="/lista/maestros" class="btn btn-info btn-block m-3">Ver</a>
             </div>
         </div>
+
     </div>
-    <br>
-    <div class="container centrado">
-        <a href="/rol" class="btn centrado">Volver</a>
+
+    <div class="box-container">
+
+        <section class="centrado">
+
+            <div class="boxSel">
+                <h1 class="heading"><span>Generar </span>reporte </h1>
+
+                <form action="/generar" method="POST">
+
+                    <select name="tipo">
+                        <option selected>Seleccionar personal:</option>
+                        <option value="Maestro">Maestro</option>
+                        <option value="Director">Director</option>
+                    </select>
+
+                    <div>
+                        <button class="btn">
+                        Buscar
+                        </button>
+                    </div>
+
+                </form>
+
+            </div>
+
+        </section>
+
     </div>
+
 </section>
-<br>
 <!-- gallery section ends -->
