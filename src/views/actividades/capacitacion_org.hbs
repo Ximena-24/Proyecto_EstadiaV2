@@ -4,7 +4,7 @@
     <div class="box-container">
         <section class="centrado">
             <div class="box">
-                <form action="/notes/newacademico" method="POST">
+                <form action="/actividades/createCapacitacion" method="POST">
                     <h2>Capacitacion y Organizacion</h2>
                     <h1>Mtro. {{user.name}}</h1>
                     <br>
@@ -19,19 +19,19 @@
                     </select>
 
                     <h2><strong>Nombre:</strong></h2>
-                    <input type="text" class="box" name="carrera" required>
+                    <input type="text" class="box" name="nombre" required>
 
                     <h2><strong>Institución Impartida:</strong></h2>
                     <input type="text" class="box" name="institucion" required>
 
-                    <h2><strong> Fecha de inicio:</strong></h2>
+                    <h2><strong>Fecha de inicio:</strong></h2>
                     <input type="date" class="box" name="fecha_inicio" required>
 
                     <h2> <strong>Fecha de termino:</strong></h2>
                     <input type="date" class="box" name="fecha_termino" required>
 
                     <h2><strong>Seleccionar Categoria:</strong></h2>
-                    <select value="tipo" value="{{tipo}}" name="tipo">
+                    <select value="categoria" value="{{tipo}}" name="categoria">
                         <option value="">Seleccionar Categoria:</option>
                         <option value="Disciplina" label="Disciplina">Disciplina</option>
                         <option value="Investigacion" label="Investigacion">Investigacion</option>

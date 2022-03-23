@@ -4,7 +4,7 @@
     <div class="box-container">
         <section class="centrado">
             <div class="box">
-                <form action="/notes/newacademico" method="POST">
+                <form action="/actividades/createParticipar" method="POST">
                     <h2>Participacion en Eventos</h2>
                     <h1>Mtro. {{user.name}}</h1>
                     <br>
@@ -20,13 +20,13 @@
                     </select>
 
                     <h2><strong>Nombre:</strong></h2>
-                    <input type="text" class="box" name="carrera" required>
+                    <input type="text" class="box" name="nombre" required>
 
                     <h2><strong>Institución Impartida:</strong></h2>
                     <input type="text" class="box" name="institucion" required>
 
                     <h2><strong> Fecha:</strong></h2>
-                    <input type="date" class="box" name="fecha_inicio" required>
+                    <input type="date" class="box" name="fecha" required>
 
                    
                          <h2 style="color: rgb(88, 151, 88);">Cargar Archivo</h2>

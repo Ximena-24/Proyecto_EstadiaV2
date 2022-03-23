@@ -14,6 +14,10 @@ const Curso = require('../models/Curso')
 const Diplomado = require('../models/Diplomado')
 const Patente = require('../models/Patente')
 
+const Capacitacion = require('../models/Capacitacion')
+const Participante = require('../models/Participante')
+
+
 
 actividadesCtrl.agregarTipos = async (req, res) => {
     if (req.user.rango === "Maestro") {
@@ -356,6 +360,40 @@ actividadesCtrl.verdiplomados = async (req, res) => {
     const nomAct = "Diplomados";
     res.render('actividades/actividades', { actividad, nomAct });
 };
+
+
+actividadesCtrl.createCapacitacion = async (req, res) => {
+    const { tipo, nombre, institucion, fecha_inicio, fecha_termino, categoria } = req.body;
+    const newDiplomado = new Diplomado({ tipo, nombre, institucion, fecha_inicio, fecha_termino, categoria });
+    newDiplomado.user = req.user.id;
+
+    newDiplomado.filename = req.file.filename;
+    newDiplomado.path = '/img/uploads/' + req.file.filename;
+    newDiplomado.originalname = req.file.originalname;
+    newDiplomado.mimetype = req.file.mimetype;
+    newDiplomado.size = req.file.size;
+
+    await newDiplomado.save();
+    req.flash('success_msg', 'creado correctamente');
+    res.redirect('/actividades/NuevasActividades');
+};
+
+actividadesCtrl.createParticipar = async (req, res) => {
+    const { tipo, nombre, institucion, fecha } = req.body;
+    const newDiplomado = new Diplomado({ tipo, nombre, institucion, fecha });
+    newDiplomado.user = req.user.id;
+
+    newDiplomado.filename = req.file.filename;
+    newDiplomado.path = '/img/uploads/' + req.file.filename;
+    newDiplomado.originalname = req.file.originalname;
+    newDiplomado.mimetype = req.file.mimetype;
+    newDiplomado.size = req.file.size;
+
+    await newDiplomado.save();
+    req.flash('success_msg', 'creado correctamente');
+    res.redirect('/actividades/NuevasActividades');
+};
+
 
 
 module.exports = actividadesCtrl;

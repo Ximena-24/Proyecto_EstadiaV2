@@ -1,34 +1,23 @@
 const {Schema, model} = require('mongoose');
 
 const ParticipanteSchema = new Schema({
-    tipo: {
+    Tipo: {
         type: String,
         required:true
     },
-    carrera: {
+    nombre: {
         type: String,
-        required: true
+        required:true
     },
     institucion: {
         type: String,
         required: true
     },
-    fecha_inicio: {
+    fecha: {
         type: String,
         required: true
     },
-    fecha_termino: {
-        type: String,
-        required: true
-    },
-    pais: {
-        type: String,
-        required: true
-    },
-    user: {
-        type: String,
-        required: true
-    }
+
 }, {
     timestamps: true
 })

@@ -1,13 +1,13 @@
 const {Schema, model} = require('mongoose');
 
 const CapacitacionSchema = new Schema({
-    tipo: {
+    Tipo: {
         type: String,
         required:true
     },
-    carrera: {
+    Nombre: {
         type: String,
-        required: true
+        required:true
     },
     institucion: {
         type: String,
@@ -21,14 +21,7 @@ const CapacitacionSchema = new Schema({
         type: String,
         required: true
     },
-    pais: {
-        type: String,
-        required: true
-    },
-    user: {
-        type: String,
-        required: true
-    }
+
 }, {
     timestamps: true
 })

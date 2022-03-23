@@ -29,7 +29,9 @@ const {
     vercursos,
     diplomado,
     createDiplomado,
-    verdiplomados
+    verdiplomados,
+    createCapacitacion,
+    createParticipar
 
     
 } = require('../controllers/actividades.controller');
@@ -72,7 +74,14 @@ router.get('/actividades/cursos', isAuthenticated, vercursos);
 
 router.get('/actividades/diplomado', isAuthenticated, diplomado); 
 router.post('/actividades/newDiplomado', isAuthenticated, createDiplomado); 
-router.get('/actividades/diplomados', isAuthenticated, verdiplomados); 
+router.get('/actividades/diplomados', isAuthenticated, verdiplomados);
+
+router.post('/actividades/createCapacitacion', isAuthenticated, createCapacitacion); 
+router.post('/actividades/createParticipar', isAuthenticated, createParticipar); 
+
+
+
+
 
 
 
