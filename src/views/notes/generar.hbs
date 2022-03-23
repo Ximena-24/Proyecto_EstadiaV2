@@ -1,0 +1,226 @@
+<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+<script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+
+<link href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css" rel="stylesheet" />
+
+<!-- pricing section starts  -->
+<section class="pricing services" id="pricing">
+    <h1 class="heading">Lista<span> Personal</span> </h1>
+    <div class="box-contanier">
+
+        <div class="box">
+            <span class="fas fa-users"></span>
+            <div class="container">
+
+                <a href="javascript:history.back()" class="btn">Volver</a>
+            </div>
+
+            <h3>Todos los Registros</h3>
+
+            <div class="desp">
+                <table id="example" class="display resp" style="width:100%">
+                    <thead>
+                        <tr>
+                            <th>
+                                <h1>N.</h1>
+                            </th>
+                            <th>
+                                <h1>Nombre</h1>
+                            </th>
+                            <th>
+                                <h1>Articulos</h1>
+                            </th>
+                            <th>
+                                <h1>Libro</h1>
+                            </th>
+                            <th>
+                                <h1>Capitulo de libro</h1>
+                            </th>
+                            <th>
+                                <h1>Reportes tecnicos</h1>
+                            </th>
+                            <th>
+                                <h1>Memorias</h1>
+                            </th>
+                            <th>
+                                <h1>Congresos</h1>
+                            </th>
+                            <th>
+                                <h1>Cursos</h1>
+                            </th>
+                            <th>
+                                <h1>Diplomado</h1>
+                            </th>
+                            <th>
+                                <h1>Patentes</h1>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                        {{#each arti}}
+                        <tr>
+                            <th>{{@index}}</th>
+                            <td>
+                                {{name}}
+                            </td>
+                            <td>
+                                <table class="resp2">
+                                    
+                                        {{#each alias_tablaA}}
+                                        <tr>
+                                            <th>{{@index}}</th>
+
+                                            <td>
+                                                {{titulo}}
+                                            </td>
+                                        </tr>
+
+                                        {{/each}}
+
+                                </table>
+                            </td>
+                            <td>
+                                <table class="resp2">
+                                    <tbody>
+                                        {{#each alias_tablaB}}
+                                        <tr>
+                                            <th>{{@index}}</th>
+
+                                            <td>
+                                                {{titulo}}
+                                            </td>
+                                        </tr>
+
+                                        {{/each}}
+
+                                    </tbody>
+                                </table>
+                            </td>
+                            <td>
+                                <table class="resp2">
+                                    <tbody>
+                                        {{#each alias_tablaC}}
+                                        <tr>
+                                            <th>{{@index}}</th>
+
+                                            <td>
+                                                {{titulo}}
+                                            </td>
+                                        </tr>
+
+                                        {{/each}}
+
+                                    </tbody>
+                                </table>
+                            </td>
+                            <td>
+                                <table class="resp2">
+                                    <tbody>
+                                        {{#each alias_tablaD}}
+                                        <tr>
+                                            <th>{{@index}}</th>
+
+                                            <td>
+                                                {{titulo}}
+                                            </td>
+                                        </tr>
+
+                                        {{/each}}
+
+                                    </tbody>
+                                </table>
+                            </td>
+                            <td>
+                                <table class="resp2">
+                                    <tbody>
+                                        {{#each alias_tablaE}}
+                                        <tr>
+                                            <th>{{@index}}</th>
+
+                                            <td>
+                                                {{titulo}}
+                                            </td>
+                                        </tr>
+
+                                        {{/each}}
+
+                                    </tbody>
+                                </table>
+                            </td>
+                            <td>
+                                <table class="resp2">
+                                    <tbody>
+                                        {{#each alias_tablaF}}
+                                        <tr>
+                                            <th>{{@index}}</th>
+
+                                            <td>
+                                                {{titulo}}
+                                            </td>
+                                        </tr>
+
+                                        {{/each}}
+
+                                    </tbody>
+                                </table>
+                            </td>
+                            <td>
+                                <table class="resp2">
+                                    <tbody>
+                                        {{#each alias_tablaG}}
+                                        <tr>
+                                            <th>{{@index}}</th>
+
+                                            <td>
+                                                {{titulo}}
+                                            </td>
+                                        </tr>
+
+                                        {{/each}}
+
+                                    </tbody>
+                                </table>
+                            </td>
+                            <td>
+                                <table class="resp2">
+                                    <tbody>
+                                        {{#each alias_tablaH}}
+                                        <tr>
+                                            <th>{{@index}}</th>
+
+                                            <td>
+                                                {{titulo}}
+                                            </td>
+                                        </tr>
+
+                                        {{/each}}
+
+                                    </tbody>
+                                </table>
+                            </td>
+                            <td>
+                                {{#each alias_tablaI}}
+                                    {{@index}}.- {{titulo}}
+                                {{/each}}
+                            </td>
+                        </tr>
+                        {{/each}}
+
+                    </tbody>
+                </table>
+            </div>
+
+
+        </div>
+
+
+    </div>
+</section>
+<!-- pricing section ends -->
+
+<script>
+    $(document).ready(function () {
+        $('#example').DataTable();
+    });
+</script>

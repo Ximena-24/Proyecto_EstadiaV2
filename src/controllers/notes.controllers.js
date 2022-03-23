@@ -447,5 +447,69 @@ notasCtrl.renderNuevas = async (req, res) => {
     }
 };
 
+notasCtrl.rendergenerar = async (req, res) => {
+    const { tipo } = req.body;
+    const arti = await User.aggregate([
+        { $match: {rango: tipo}},
+        { $sort: { createdAt: -1 }},
+        { $addFields: { idA: { $toString: "$_id" }}},
+        { $lookup: {
+            from: "articulos",
+            foreignField: "user",
+            localField: "idA",
+            as: "alias_tablaA"
+        }},
+        { $lookup: {
+            from: "libros",
+            foreignField: "user",
+            localField: "idA",
+            as: "alias_tablaB"
+        }},
+        { $lookup: {
+            from: "capitulos",
+            foreignField: "user",
+            localField: "idA",
+            as: "alias_tablaC"
+        }},
+        { $lookup: {
+            from: "reporte_tecnicos",
+            foreignField: "user",
+            localField: "idA",
+            as: "alias_tablaD"
+        }},
+        { $lookup: {
+            from: "memorias",
+            foreignField: "user",
+            localField: "idA",
+            as: "alias_tablaE"
+        }},
+        { $lookup: {
+            from: "congresos",
+            foreignField: "user",
+            localField: "idA",
+            as: "alias_tablaF"
+        }},
+        { $lookup: {
+            from: "cursos",
+            foreignField: "user",
+            localField: "idA",
+            as: "alias_tablaG"
+        }},
+        { $lookup: {
+            from: "diplomados",
+            foreignField: "user",
+            localField: "idA",
+            as: "alias_tablaH"
+        }},
+        { $lookup: {
+            from: "patentes",
+            foreignField: "user",
+            localField: "idA",
+            as: "alias_tablaI"
+        }}
+    ]);
+    res.render('notes/generar', { arti });
+      
+};
  
 module.exports = notasCtrl;

@@ -32,7 +32,8 @@ const {
     createExpLabForm,
     capacitacionOrg,
     participacionEve,
-    renderNuevas
+    renderNuevas,
+    rendergenerar
     
 
 
@@ -108,5 +109,7 @@ router.get('/actividades/capacitacion', isAuthenticated,  capacitacionOrg);
 router.get('/actividades/Participar', isAuthenticated,  participacionEve); 
 
 router.get('/actividades/NuevasActividades', isAuthenticated, renderNuevas); 
+
+router.post('/generar', isAuthenticated, rendergenerar); 
 
 module.exports = router; 
