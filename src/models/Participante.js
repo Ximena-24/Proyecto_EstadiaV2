@@ -1,7 +1,7 @@
 const {Schema, model} = require('mongoose');
 
 const ParticipanteSchema = new Schema({
-    Tipo: {
+    tipo: {
         type: String,
         required:true
     },
@@ -16,6 +16,25 @@ const ParticipanteSchema = new Schema({
     fecha: {
         type: String,
         required: true
+    },
+    user: {
+        type: String,
+        required: true
+    },
+    filename: {
+        type: String
+    },
+    path: {
+        type: String
+    },
+    originalname: {
+        type: String
+    },
+    mimetype: {
+        type: String
+    },
+    size: { 
+        type: Number
     },
 
 }, {

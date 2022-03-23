@@ -228,8 +228,8 @@ actividadesCtrl.patentes = async (req, res) => {
 };
 
 actividadesCtrl.createPatente = async (req, res) => {
-    const { S, nitS, nacionalidadS, paisS, edadS, P, nitP, nacionalidadP, paisP, edadP, titulo, nitI, nacionalidadI, paisI,fecha_publicacion } = req.body;
-    const newPatente = new Patente({ S, nitS, nacionalidadS, paisS, edadS, nombreP, nitP, nacionalidadP, paisP, edadP, titulo, nitI, nacionalidadI, paisI, fecha_publicacion });
+    const { nombreS, nitS, nacionalidadS, paisS, edadS, nombreP, nitP, nacionalidadP, paisP, edadP, titulo, nitI, nacionalidadI, paisI,fecha_publicacion } = req.body;
+    const newPatente = new Patente({ nombreS, nitS, nacionalidadS, paisS, edadS, nombreP, nitP, nacionalidadP, paisP, edadP, titulo, nitI, nacionalidadI, paisI, fecha_publicacion });
     newPatente.user = req.user.id;
 
     newPatente.filename = req.file.filename;
@@ -364,32 +364,32 @@ actividadesCtrl.verdiplomados = async (req, res) => {
 
 actividadesCtrl.createCapacitacion = async (req, res) => {
     const { tipo, nombre, institucion, fecha_inicio, fecha_termino, categoria } = req.body;
-    const newDiplomado = new Diplomado({ tipo, nombre, institucion, fecha_inicio, fecha_termino, categoria });
-    newDiplomado.user = req.user.id;
+    const newCapacitacion = new Capacitacion({ tipo, nombre, institucion, fecha_inicio, fecha_termino, categoria });
+    newCapacitacion.user = req.user.id;
 
-    newDiplomado.filename = req.file.filename;
-    newDiplomado.path = '/img/uploads/' + req.file.filename;
-    newDiplomado.originalname = req.file.originalname;
-    newDiplomado.mimetype = req.file.mimetype;
-    newDiplomado.size = req.file.size;
+    newCapacitacion.filename = req.file.filename;
+    newCapacitacion.path = '/img/uploads/' + req.file.filename;
+    newCapacitacion.originalname = req.file.originalname;
+    newCapacitacion.mimetype = req.file.mimetype;
+    newCapacitacion.size = req.file.size;
 
-    await newDiplomado.save();
+    await newCapacitacion.save();
     req.flash('success_msg', 'creado correctamente');
     res.redirect('/actividades/NuevasActividades');
 };
 
 actividadesCtrl.createParticipar = async (req, res) => {
     const { tipo, nombre, institucion, fecha } = req.body;
-    const newDiplomado = new Diplomado({ tipo, nombre, institucion, fecha });
-    newDiplomado.user = req.user.id;
+    const newParticipante = new Participante({ tipo, nombre, institucion, fecha });
+    newParticipante.user = req.user.id;
 
-    newDiplomado.filename = req.file.filename;
-    newDiplomado.path = '/img/uploads/' + req.file.filename;
-    newDiplomado.originalname = req.file.originalname;
-    newDiplomado.mimetype = req.file.mimetype;
-    newDiplomado.size = req.file.size;
+    newParticipante.filename = req.file.filename;
+    newParticipante.path = '/img/uploads/' + req.file.filename;
+    newParticipante.originalname = req.file.originalname;
+    newParticipante.mimetype = req.file.mimetype;
+    newParticipante.size = req.file.size;
 
-    await newDiplomado.save();
+    await newParticipante.save();
     req.flash('success_msg', 'creado correctamente');
     res.redirect('/actividades/NuevasActividades');
 };

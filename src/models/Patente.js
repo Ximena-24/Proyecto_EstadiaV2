@@ -53,10 +53,6 @@ const PatenteSchema = new Schema({
         type: String,
         required: true
     },
-    edadI: {
-        type: String,
-        required:true
-    },
     fecha_publicacion: {
         type: String,
         required:true

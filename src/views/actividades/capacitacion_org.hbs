@@ -1,10 +1,10 @@
 <section class="contact services">
-     <h1 class="heading">Agregar<span> Capacitacion y organizacion</span></h1>
+    <h1 class="heading">Agregar<span> Capacitacion y organizacion</span></h1>
 
     <div class="box-container">
         <section class="centrado">
             <div class="box">
-                <form action="/actividades/createCapacitacion" method="POST">
+                <form action="/actividades/createCapacitacion" method="POST" enctype="multipart/form-data">
                     <h2>Capacitacion y Organizacion</h2>
                     <h1>Mtro. {{user.name}}</h1>
                     <br>
@@ -38,190 +38,23 @@
                         <option value="Pedagogia - Docentes" label="Pedagogia - Docentes">Pedagogia - Docentes</option>
                         <option value="Gestion o Habilidad" label="Gestion o Habilidad">Gestion o Habilidad</option>
                         <option value="TICCAP" label="TICCAP">TICCAP</option>
-                     
-                    </select>
-                         <h2 style="color: rgb(88, 151, 88);">Cargar Archivo</h2>
-                         <input type="file" name="image" class="box">
 
-            <div>
-               <button class="btn">
-                     Guardar
-                </button>
-                    <a href="javascript:history.back()" class="btn">Volver</a>
+                    </select>
+
+                    <h2 style="color: rgb(88, 151, 88);">Cargar Archivo</h2>
+                    <input type="file" name="image" class="box">
+
+                    <div>
+                        <button class="btn">
+                            Guardar
+                        </button>
+                        <a href="javascript:history.back()" class="btn">Volver</a>
+                    </div>
+
+                </form>
             </div>
+        </section>
 
-         </form>
-        </div>
-    </section>
-
-    </div>
-</section>
-
-
-                 
-<!-- pricing section starts  -->
-<section class="pricing services" id="pricing">
-    <div class="box-contanier">
-        <div class="box">
-            <div class="skills__container container2 grid">
-                
-                
-                <div>
-                    <!--==================== SKILLS 1 ====================-->
-                    <div class="skills__content skills__close">
-                        <div class="skills__header">
-                            <div>
-                                <h1>Curso</h1>
-                            </div>
-                            <i class="fas fa-angle-down skills__arrow"></i>
-                        </div>
-
-                        <div class="skills__list grid">
-        
-    <div class="box-container">
-        <section class="centrado">
-            <div class="box">
-                <form action="/notes/newacademico" method="POST">
-                    <h2>Capacitacion y Organizacion</h2>
-                    <h1>Mtro. {{user.name}}</h1>
-                    <br>
-
-                    <h2><strong>Seleccionar un Tipo:</strong></h2>
-                    <select value="tipo" value="{{tipo}}" name="tipo">
-                        <option value="">Seleccionar un Tipo</option>
-                        <option value="Curso" label="Curso">Curso</option>
-                        <option value="Taller" label="Taller">Taller</option>
-                        <option value="Diplomado" label="Diplomado">Diplomado</option>
-                        <option value="Otro" label="Otro">Otro</option>
-                    </select>
-
-                    <h2><strong>Nombre:</strong></h2>
-                    <input type="text" class="box" name="carrera" required>
-
-                    <h2><strong>Institución Impartida:</strong></h2>
-                    <input type="text" class="box" name="institucion" required>
-
-                    <h2><strong> Fecha de inicio:</strong></h2>
-                    <input type="date" class="box" name="fecha_inicio" required>
-
-                    <h2> <strong>Fecha de termino:</strong></h2>
-                    <input type="date" class="box" name="fecha_termino" required>
-
-                    <h2><strong>Seleccionar Categoria:</strong></h2>
-                    <select value="tipo" value="{{tipo}}" name="tipo">
-                        <option value="">Seleccionar Categoria:</option>
-                        <option value="Disciplina" label="Disciplina">Disciplina</option>
-                        <option value="Investigacion" label="Investigacion">Investigacion</option>
-                        <option value="Pedagogia - Docentes" label="Pedagogia - Docentes">Pedagogia - Docentes</option>
-                        <option value="Gestion o Habilidad" label="Gestion o Habilidad">Gestion o Habilidad</option>
-                        <option value="TICCAP" label="TICCAP">TICCAP</option>
-                     
-                    </select>
-                         <h2 style="color: rgb(88, 151, 88);">Cargar Archivo</h2>
-                         <input type="file" name="image" class="box">
-
-            <div>
-               <button class="btn">
-                     Guardar
-                </button>
-                    <a href="javascript:history.back()" class="btn">Volver</a>
-            </div>
-
-         </form>
-        </div>
-    </section>
-
-    </div>
-   
-                        </div>
-                    </div>
-                </div>
-
-                <div>
-                    <!--==================== SKILLS 2 ====================-->
-                    <div class="skills__content skills__close">
-                        <div class="skills__header">
-                            <div>
-                                <h1>Taller</h1>
-                            </div>
-                            <i class="fas fa-angle-down skills__arrow"></i>
-                        </div>
-
-                        <div class="skills__list grid">
-                            <table id="example2" class="display" style="width:100%" >
-                                <thead>
-                                    <tr class="tablacolor">
-                                        <th scope="col">
-                                            <h1 class="skills__title">N.</h1>
-                                        </th>
-                                        <th scope="col">
-                                            <h1 class="skills__title">Título</h1>
-                                        </th>
-                                        <th scope="col">
-                                            <h1 class="skills__title">Fecha de registro</h1>
-                                        </th>
-                                        <th scope="col">
-                                            <h1 class="skills__title">Acciones</h1>
-                                        </th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>
-                                            <a href="#" class="btn"><i class="fas fa-edit"></i></a>
-                                            <a href="#" class="btn"><i class="fas fa-trash-alt"></i></a>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                </div>
-
-                <div>
-                    <!--==================== SKILLS 2 ====================-->
-                    <div class="skills__content skills__close">
-                        <div class="skills__header">
-                            <div>
-                                <h1>Diplomado</h1>
-                            </div>
-                            <i class="fas fa-angle-down skills__arrow"></i>
-                        </div>
-
-                        <div class="skills__list grid">
-                            <table id="example2" class="display" style="width:100%" >
-                                <thead>
-                                    <tr class="tablacolor">
-                                        <th scope="col">
-                                            <h1 class="skills__title">N.</h1>
-                                        </th>
-                                        <th scope="col">
-                                            <h1 class="skills__title">Título</h1>
-                                        </th>
-                                        <th scope="col">
-                                            <h1 class="skills__title">Fecha de registro</h1>
-                                        </th>
-                                        <th scope="col">
-                                            <h1 class="skills__title">Acciones</h1>
-                                        </th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>
-                                            <a href="#" class="btn"><i class="fas fa-edit"></i></a>
-                                            <a href="#" class="btn"><i class="fas fa-trash-alt"></i></a>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                </div>
-                   
-                   
-         </div>
-      </div>
     </div>
 </section>
 <!-- pricing section ends -->
