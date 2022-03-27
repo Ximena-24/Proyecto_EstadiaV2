@@ -31,7 +31,9 @@ const {
     createDiplomado,
     verdiplomados,
     createCapacitacion,
-    createParticipar
+    createParticipar,
+    verCapacitacion,
+    verParticipacion
 
     
 } = require('../controllers/actividades.controller');
@@ -78,9 +80,8 @@ router.get('/actividades/diplomados', isAuthenticated, verdiplomados);
 
 router.post('/actividades/createCapacitacion', isAuthenticated, createCapacitacion); 
 router.post('/actividades/createParticipar', isAuthenticated, createParticipar); 
-
-
-
+router.get('/actividades/Capacitaciones', isAuthenticated, verCapacitacion);
+router.get('/actividades/Participantes', isAuthenticated, verParticipacion);
 
 
 

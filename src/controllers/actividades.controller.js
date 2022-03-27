@@ -394,6 +394,18 @@ actividadesCtrl.createParticipar = async (req, res) => {
     res.redirect('/actividades/NuevasActividades');
 };
 
+actividadesCtrl.verCapacitacion = async (req, res) => {
+    const actividad = await Capacitacion.find({ user: req.user.id }).sort({ createdAt: 'desc' });
+    const nomAct = "Capacitaciones";
+    res.render('actividades/actividades', { actividad, nomAct });
+};
+
+actividadesCtrl.verParticipacion = async (req, res) => {
+    const actividad = await Participante.find({ user: req.user.id }).sort({ createdAt: 'desc' });
+    const nomAct = "Participaciones";
+    res.render('actividades/actividades', { actividad, nomAct });
+};
+
 
 
 module.exports = actividadesCtrl;
