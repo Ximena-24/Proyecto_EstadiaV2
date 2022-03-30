@@ -363,8 +363,8 @@ actividadesCtrl.verdiplomados = async (req, res) => {
 
 
 actividadesCtrl.createCapacitacion = async (req, res) => {
-    const { tipo, nombre, institucion, fecha_inicio, fecha_termino, categoria } = req.body;
-    const newCapacitacion = new Capacitacion({ tipo, nombre, institucion, fecha_inicio, fecha_termino, categoria });
+    const { tipo, titulo, institucion, fecha_inicio, fecha_termino, categoria } = req.body;
+    const newCapacitacion = new Capacitacion({ tipo, titulo, institucion, fecha_inicio, fecha_termino, categoria });
     newCapacitacion.user = req.user.id;
 
     newCapacitacion.filename = req.file.filename;
@@ -379,8 +379,8 @@ actividadesCtrl.createCapacitacion = async (req, res) => {
 };
 
 actividadesCtrl.createParticipar = async (req, res) => {
-    const { tipo, nombre, institucion, fecha } = req.body;
-    const newParticipante = new Participante({ tipo, nombre, institucion, fecha });
+    const { tipo, titulo, institucion, fecha } = req.body;
+    const newParticipante = new Participante({ tipo, titulo, institucion, fecha });
     newParticipante.user = req.user.id;
 
     newParticipante.filename = req.file.filename;

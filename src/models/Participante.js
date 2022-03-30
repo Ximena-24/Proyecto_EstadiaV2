@@ -5,7 +5,7 @@ const ParticipanteSchema = new Schema({
         type: String,
         required:true
     },
-    nombre: {
+    titulo: {
         type: String,
         required:true
     },
