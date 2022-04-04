@@ -1,0 +1,388 @@
+<!-- services section starts  -->
+<section class="services" id="services">
+
+    <h1 class="heading"><span>Información</span> </h1>
+
+    <div class="box-container">
+        <section class="centrado">
+            <div class="box">
+                <div class="container">
+                    <a href="javascript:history.back()" class="btn m-2">Volver</a>
+                </div>
+
+                <div class="actividad grid"
+                    style="background-color:#b3aca7; margin-top:2rem; padding-bottom:2rem;border-radius:0.5rem">
+
+                    {{#if actividad}}
+                    <br>
+                    <h1 class="heading">Articulos</h1>
+
+                    <h2><strong> ISSN:</strong></h2>
+                    <input type="text" class="box" value="{{actividad.issn}}" readonly>
+
+                    <h2><strong> DOI:</strong></h2>
+                    <input type="text" class="box" value="{{actividad.doi}}" readonly>
+
+                    <h2><strong> Nombre del artículo:</strong></h2>
+                    <input type="text" class="box" value="{{actividad.titulo}}" readonly>
+
+                    <h2> <strong> Nombre revista:</strong></h2>
+                    <input type="text" class="box" value="{{actividad.nom_revista}}" readonly>
+
+                    <h2><strong> Título del artículo:</strong></h2>
+                    <input type="text" class="box" value="{{actividad.titulo_revista}}" readonly>
+
+                    <h2><strong> Año de publicación:</strong></h2>
+                    <input type="date" class="box" value="{{actividad.fecha_publicacion}}" readonly>
+
+                    <h2><strong> Área:</strong></h2>
+                    <input type="text" class="box" value="{{actividad.area}}" readonly>
+
+                    <h2><strong>Rol:</strong></h2>
+                    <input type="link" class="box" value="{{actividad.rol}}" readonly>
+
+                    <h2><strong>Descargar archivo:</strong> </h2>
+                    <a download="" href="{{actividad.path}}" class="box3">Dowland CV <i class="fas fa-download"></i></a>
+                    {{/if}}
+
+                    {{#if libro}}
+                    <br>
+
+                    <h1 class="heading">Libro </h1> 
+
+                    <h2><strong> ISBN:</strong></h2>
+                    <input type="text" class="box" value="{{libro.isbn}}" readonly>
+
+                    <h2><strong> Título del libro:</strong></h2>
+                    <input type="text" class="box" value="{{libro.titulo}}" readonly>
+
+                    <h2><strong> País:</strong></h2>
+                    <input type="text" class="box" value="{{libro.pais}}" readonly>
+
+                    <h2><strong> Idioma:</strong></h2>
+                    <input type="text" class="box" value="{{libro.idioma}}" readonly>
+
+                    <h2><strong> Año de publicación:</strong></h2>
+                    <input type="date" class="box" value="{{libro.fecha_publicacion}}" readonly>
+
+                    <h2> <strong> Editorial:</strong></h2>
+                    <input type="text" class="box" value="{{libro.editorial}}" readonly>
+
+                    <h2><strong> Edición:</strong></h2>
+                    <input type="text" class="box" value="{{libro.edicion}}" readonly>
+
+                    <h2><strong>Descargar archivo:</strong> </h2>
+                    <a download="" href="{{libro.path}}" class="box3">Dowland CV <i class="fas fa-download"></i></a>
+
+                    {{/if}}
+
+                    {{#if caplibro}}
+                    <br>
+
+                    <h1 class="heading">Capitulo de libro </h1>
+
+                    <h2><strong> ISBN:</strong></h2>
+                    <input type="text" class="box" value="{{caplibro.isbn}}" readonly>
+
+                    <h2><strong> Título del libro:</strong></h2>
+                    <input type="text" class="box" value="{{caplibro.titulo}}" readonly>
+
+                    <h2><strong> País:</strong></h2>
+                    <input type="text" class="box" value="{{caplibro.pais}}" readonly>
+
+                    <h2><strong> Idioma:</strong></h2>
+                    <input type="text" class="box" value="{{caplibro.idioma}}" readonly>
+
+                    <h2><strong> Año de publicación:</strong></h2>
+                    <input type="date" class="box" value="{{caplibro.fecha_publicacion}}" readonly>
+
+                    <h2> <strong> Editorial:</strong></h2>
+                    <input type="text" class="box" value="{{caplibro.editorial}}" readonly>
+
+                    <h2><strong> Edición:</strong></h2>
+                    <input type="text" class="box" value="{{caplibro.edicion}}" readonly>
+
+                    <h2><strong> Titulo del Capitulo:</strong></h2>
+                    <input type="text" class="box" value="{{caplibro.titulo_capitulo}}" readonly>
+
+                    <h2><strong> Numero del Capitulo:</strong></h2>
+                    <input type="number" class="box" value="{{caplibro.num_capitulo}}" readonly>
+
+                    <h2><strong> Pagina del Libro:</strong></h2>
+                    <input type="number" class="box" value="{{caplibro.pag_Capitulo}}" readonly>
+
+                    <h2><strong>Descargar archivo:</strong> </h2>
+                    <a download="" href="{{caplibro.path}}" class="box3">Dowland CV <i class="fas fa-download"></i></a>
+
+                    {{/if}}
+
+                    {{#if reportetec}}
+                    <br>
+
+                    <h1 class="heading">Reporte Técnico </h1>
+
+                    <h2><strong>Titulo:</strong></h2>
+                    <input type="text" class="box" value="{{reportetec.titulo}}" readonly>
+
+                    <h2><strong> Empresa o institucion:</strong></h2>
+                    <input type="text" class="box" value="{{reportetec.empresa}}" readonly>
+
+                    <h2><strong> Fecha de entrega:</strong></h2>
+                    <input type="date" class="box" value="{{reportetec.fecha_entrega}}" readonly>
+
+                    <h2><strong> Descipcion:</strong></h2>
+                    <input type="text" class="box" value="{{reportetec.descripcion}}" readonly>
+
+                    <h2><strong> Objetivos:</strong></h2>
+                    <input type="text" class="box" value="{{reportetec.objetivos}}" readonly>
+
+                    <h2><strong>Descargar archivo:</strong> </h2>
+                    <a download="" href="{{reportetec.path}}" class="box3">Dowland CV <i
+                            class="fas fa-download"></i></a>
+
+                    {{/if}}
+
+                    {{#if memoria}}
+                    <br>
+
+                    <h1 class="heading">Memorias </h1>
+
+                    <h2><strong> ISBN:</strong></h2>
+                    <input type="text" class="box" value="{{memoria.isbn}}" readonly>
+
+                    <h2><strong> Titulo del Libro:</strong></h2>
+                    <input type="text" class="box" value="{{memoria.titulo}}" readonly>
+
+                    <h2><strong> Pais:</strong></h2>
+                    <input type="text" class="box" value="{{memoria.pais}}" readonly>
+
+                    <h2><strong> Idioma:</strong></h2>
+                    <input type="text" class="box" value="{{memoria.idioma}}" readonly>
+
+                    <h2><strong> Año de Publicacion:</strong></h2>
+                    <input type="date" class="box" value="{{memoria.fecha_publicacion}}" readonly>
+
+                    <h2> <strong> Editorial:</strong></h2>
+                    <input type="text" class="box" value="{{memoria.editorial}}" readonly>
+
+                    <h2><strong> Edicion:</strong></h2>
+                    <input type="text" class="box" value="{{memoria.edicion}}" readonly>
+
+                    <h2><strong> Titulo del Capitulo:</strong></h2>
+                    <input type="text" class="box" value="{{memoria.titulo_capitulo}}" readonly>
+
+                    <h2><strong> Numero del Capitulo:</strong></h2>
+                    <input type="text" class="box" value="{{memoria.num_capitulo}}" readonly>
+
+                    <h2><strong> Pagina del Libro:</strong></h2>
+                    <input type="numeric" class="box" value="{{memoria.pag_capitulo}}" readonly>
+
+                    <h2><strong>Descargar archivo:</strong> </h2>
+                    <a download="" href="{{memoria.path}}" class="box3">Dowland CV <i class="fas fa-download"></i></a>
+
+                    {{/if}}
+
+                    {{#if congreso}}
+                    <br>
+
+                    <h1 class="heading">Congreso </h1>
+
+                    <h2><strong> Nombre del Congreso:</strong></h2>
+                    <input type="text" class="box" value="{{congreso.titulo}}" readonly>
+
+                    <h2><strong> Horas Totales:</strong></h2>
+                    <input type="text" class="box" value="{{congreso.horas}}" readonly>
+
+                    <h2><strong> Fecha de Inicio:</strong></h2>
+                    <input type="date" class="box" value="{{congreso.fecha_inicio}}" readonly>
+
+                    <h2><strong> Fecha de Termino:</strong></h2>
+                    <input type="date" class="box" value="{{congreso.fecha_termino}}" readonly>
+
+                    <h2> <strong> Nivel de Escolaridad:</strong></h2>
+                    <input type="text" class="box" value="{{congreso.nivel_escolaridad}}" readonly>
+
+                    <h2><strong> Area de Conocimiento:</strong></h2>
+                    <input type="text" class="box" value="{{congreso.area_conocimineto}}" readonly>
+
+                    <h2><strong> Institución:</strong></h2>
+                    <input type="text" class="box" value="{{congreso.institucion}}" readonly>
+
+                    <h2><strong> Año:</strong></h2>
+                    <input type="date" class="box" value="{{congreso.año}}" readonly>
+
+                    <h2><strong>Descargar archivo:</strong> </h2>
+                    <a download="" href="{{congreso.path}}" class="box3">Dowland CV <i class="fas fa-download"></i></a>
+
+                    {{/if}}
+
+                    {{#if capacitacion}}
+                    <br>
+
+                    <h1 class="heading">Capacitación </h1> <br><br>
+
+                    <h2><strong>Tipo:</strong></h2>
+                    <input type="text" class="box" value="{{capacitacion.tipo}}" readonly>
+
+                    <h2><strong>Nombre:</strong></h2>
+                    <input type="text" class="box" value="{{capacitacion.titulo}}" readonly>
+
+                    <h2><strong>Institución Impartida:</strong></h2>
+                    <input type="text" class="box" value="{{capacitacion.institucion}}" readonly>
+
+                    <h2><strong>Fecha de inicio:</strong></h2>
+                    <input type="date" class="box" value="{{capacitacion.fecha_inicio}}" readonly>
+
+                    <h2> <strong>Fecha de termino:</strong></h2>
+                    <input type="date" class="box" value="{{capacitacion.fecha_termino}}" readonly>
+
+                    <h2><strong>Categoria:</strong></h2>
+                    <input type="text" class="box" value="{{capacitacion.categoria}}" readonly>
+
+
+                    <h2><strong>Descargar archivo:</strong> </h2>
+                    <a download="" href="{{capacitacion.path}}" class="box3">Dowland CV <i
+                            class="fas fa-download"></i></a>
+
+                    {{/if}}
+
+                    {{#if participante}}
+                    <br>
+
+                    <h1 class="heading">Participación en Eventos </h1> <br><br>
+                    
+                    <h2><strong>Tipo:</strong></h2>
+                    <input type="text" class="box" value="{{participante.tipo}}" readonly>
+
+                    <h2><strong>Nombre:</strong></h2>
+                    <input type="text" class="box" value="{{participante.titulo}}" readonly>
+
+                    <h2><strong>Institución Impartida:</strong></h2>
+                    <input type="text" class="box" value="{{participante.institucion}}" readonly>
+
+                    <h2><strong> Fecha:</strong></h2>
+                    <input type="date" class="box" value="{{participante.fecha}}" readonly>
+
+                    <h2><strong>Descargar archivo:</strong> </h2>
+                    <a download="" href="{{participante.path}}" class="box3">Dowland CV <i
+                            class="fas fa-download"></i></a>
+
+                    {{/if}}
+                </div>
+
+                <div>
+                    {{#if patente}}
+                    <br>
+
+                    <h1 class="heading">Patente </h1> <br><br>
+
+                    <table class="tabladiseño">
+                        <thead>
+                            <tr>
+                                <!-- filass. acostados -->
+                                <th colspan="5" style="background-color: darkgrey;">Patentes</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <th colspan="3" scope="rowgroup" style="background-color: rgb(186, 199, 189);">Datos del
+                                    solicitante</th>
+                                <th colspan="3" scope="rowgroup" style="background-color: rgb(186, 199, 189);">Datos del
+                                    propietario</th>
+                            </tr>
+
+                            <tr>
+                                <th> Nombre Completo:</th>
+                                <td colspan="2"> <input type="text" value="{{patente.nombreS}}" style="border: 0;">
+                                </td>
+
+                                <th> Nombre Completo:</th>
+                                <td colspan="2"> <input type="text" value="{{patente.nombreP}}" style="border: 0;">
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <th> NIT: </th>
+                                <td colspan="2"> <input type="text" value="{{patente.nitS}}" style="border: 0;"> </td>
+
+                                <th> NIT: </th>
+                                <td colspan="2"> <input type="text" value="{{patente.nitP}}" style="border: 0;"> </td>
+                            </tr>
+
+                            <tr>
+                                <th> Nacionalidad:</th>
+                                <td colspan="2"> <input type="text" value="{{patente.nacionalidadS}}"
+                                        style="border: 0;"> </td>
+
+                                <th> Nacionalidad:</th>
+                                <td colspan="2"> <input type="text" value="{{patente.nacionalidadP}}"
+                                        style="border: 0;"> </td>
+                            </tr>
+
+                            <tr>
+                                <th> Pais: </th>
+                                <td colspan="2"> <input type="text" value="{{patente.paisS}}" style="border: 0;"> </td>
+
+                                <th> Pais: </th>
+                                <td colspan="2"> <input type="text" value="{{patente.paisP}}" style="border: 0;"> </td>
+                            </tr>
+
+                            <tr>
+                                <th> Edad: </th>
+                                <td colspan="2"> <input type="text" value="{{patente.edadS}}" style="border: 0;"> </td>
+
+                                <th> Edad: </th>
+                                <td> <input type="text" value="{{patente.edadP}}" style="border: 0;"> </td>
+                            </tr>
+                        </tbody>
+
+
+
+                        <tbody>
+                            <tr>
+                                <th colspan="5" scope="rowgroup" style="background-color: darkgrey;">DATOS DEL INVENTO
+                                </th>
+                            </tr>
+
+                            <tr>
+                                <th colspan="2"> Nombre Completo:</th>
+                                <td colspan="3"> <input type="text" value="{{patente.titulo}}" style="border: 0;"> </td>
+                            </tr>
+
+                            <tr>
+                                <th colspan="2"> NIT: </th>
+                                <td colspan="3"> <input type="text" value="{{patente.nitI}}" style="border: 0;"> </td>
+                            </tr>
+
+                            <tr>
+                                <th colspan="2"> Nacionalidad:</th>
+                                <td colspan="3"> <input type="text" value="{{patente.nacionalidadI}}"
+                                        style="border: 0;"> </td>
+                            </tr>
+
+                            <tr>
+                                <th colspan="2"> Pais: </th>
+                                <td colspan="3"> <input type="text" value="{{patente.paisI}}" style="border: 0;"> </td>
+                            </tr>
+
+                            <tr>
+                                <th colspan="2"> Fecha depublicacion: </th>
+                                <td colspan="3"> <input type="text" value="{{patente.fecha_publicacion}}"
+                                        style="border: 0;"> </td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+
+                    <h2><strong>Descargar archivo:</strong> </h2>
+                    <a download="" href="{{patente.path}}" class="box3">Dowland CV <i class="fas fa-download  "></i></a>
+
+                    {{/if}}
+
+                </div>
+        </section>
+    </div>
+
+</section>
+<!-- services section ends -->

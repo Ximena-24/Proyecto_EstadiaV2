@@ -37,6 +37,10 @@ const PatenteSchema = new Schema({
         type: String,
         required: true
     },
+    edadP: {
+        type: String,
+        required:true
+    },
     titulo: {
         type: String,
         required:true

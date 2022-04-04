@@ -33,7 +33,8 @@ const {
     capacitacionOrg,
     participacionEve,
     renderNuevas,
-    rendergenerar
+    rendergenerar,
+    renderVerActi
     
 
 
@@ -110,6 +111,8 @@ router.get('/actividades/Participar', isAuthenticated,  participacionEve);
 
 router.get('/actividades/NuevasActividades', isAuthenticated, renderNuevas); 
 
-router.post('/generar', isAuthenticated, rendergenerar); 
+router.post('/generar', isAuthenticated, rendergenerar);
+
+router.get('/verActiviada/:id', isAuthenticated, renderVerActi);
 
 module.exports = router; 

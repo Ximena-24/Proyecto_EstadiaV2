@@ -1,0 +1,77 @@
+<!-- pricing section starts  -->
+<section class="pricing services" id="pricing">
+    <h1 class="heading">Lista<span> Personal</span> </h1>
+    <div class="box-contanier">
+
+        <div class="box">
+            <span class="fas fa-users"></span>
+            <div class="container">
+
+                <a href="javascript:history.back()" class="btn">Volver</a>
+            </div>
+
+            <h3>Todos los Registros</h3>
+
+            <table class="resp">
+                <thead>
+                    <tr class="tablacolor">
+                        <th scope="col">
+                            <h1>N.</h1>
+                        </th>
+                        <th scope="col">
+                            <h1>Nombre</h1>
+                        </th>
+                        <th scope="col">
+                            <h1>Fecha de Ingreso</h1>
+                        </th>
+                        <th scope="col">
+                            <h1>Estatus</h1>
+                        </th>
+                        <th scope="col">
+                            <h1>Operación</h1>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    {{#each user}}
+
+                    <tr>
+                        <th scope="row">{{@index}}</th>
+                        <td>
+                            {{name}}
+                        </td>
+
+                        <td>
+                            {{createdAt}}
+                        </td>
+
+                        <td>{{#if status}}
+                            Activo
+                            {{else}}
+                            Inactivo
+                            {{/if}}
+                        </td>
+                        <td>
+                            <abbr title="Ver perfil"><a href="/personal/info/{{_id}}" class="btn"><i class="fas fa-id-card-alt"></i></a></abbr>
+                            <abbr title="Ver actividades"><a href="/personal/notes/{{_id}}" class="btn"><i class="fas fa-file-alt"></i></a></abbr>
+                            {{#if status}}
+                            <abbr title="Dar de baja"><a href="/personal/toogleStatus/{{_id}}" class="btn"><i class="fas fa-thumbs-down"></i></a></abbr>
+                            {{else}}
+                            <abbr title="Dar de alta"><a href="/personal/toogleStatus/{{_id}}" class="btn"><i class="fas fa-thumbs-up"></i></a></abbr>
+                            {{/if}}
+                        </td>
+                    </tr>
+
+                    {{/each}}
+
+                </tbody>
+            </table>
+
+
+        </div>
+
+
+    </div>
+</section>
+<!-- pricing section ends -->

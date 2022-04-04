@@ -16,6 +16,8 @@ const Congreso = require('../models/Congreso')
 const Curso = require('../models/Curso')
 const Diplomado = require('../models/Diplomado')
 const Patente = require('../models/Patente')
+const Capacitacion = require('../models/Capacitacion')
+const Participante = require('../models/Participante')
 
 notasCtrl.renderNoteForm = (req, res) => {
     res.render('notes/newnote');
@@ -103,8 +105,8 @@ notasCtrl.renderEditInfo = async (req, res) => {
 };
 
 notasCtrl.updateInfo = async (req, res) => {
-    const { direccion, telefono } = req.body;
-    await User.findByIdAndUpdate(req.user.id, { direccion, telefono });
+    const { telefono } = req.body;
+    await User.findByIdAndUpdate(req.user.id, { telefono });
     req.flash('success_msg', 'Nota actualizada correctamente');
     res.redirect('/info/' + req.user.id);
 };
@@ -148,8 +150,9 @@ notasCtrl.renderMaestros = async (req, res) => {
     }
 
     if (req.user.rango === "Director") {
-        const user = await User.find({ rango: "Maestro" });
-        res.render('notes/lista_personal', { user });
+        const dir = req.user.direccion;
+        const user = await User.find({ rango: "Maestro" , direccion: dir});
+        res.render('notes/lista_maestros', { user });
     }
 
     if (req.user.rango === "Admin") {
@@ -448,9 +451,10 @@ notasCtrl.renderNuevas = async (req, res) => {
 };
 
 notasCtrl.rendergenerar = async (req, res) => {
+    const {direccion} = req.body;
     const { tipo } = req.body;
     const arti = await User.aggregate([
-        { $match: {rango: tipo}},
+        { $match: {rango: tipo, direccion: direccion}},
         { $sort: { createdAt: -1 }},
         { $addFields: { idA: { $toString: "$_id" }}},
         { $lookup: {
@@ -510,6 +514,20 @@ notasCtrl.rendergenerar = async (req, res) => {
     ]);
     res.render('notes/generar', { arti });
       
+};
+
+notasCtrl.renderVerActi = async (req, res) => {
+    const user = await User.findById(req.user.id);
+    const actividad = await Articulo.findById(req.params.id);
+    const libro = await Libro.findById(req.params.id);
+    const caplibro = await CapLibro.findById(req.params.id);
+    const reportetec = await ReporteTec.findById(req.params.id);
+    const memoria = await Memoria.findById(req.params.id);
+    const patente = await Patente.findById(req.params.id);
+    const congreso = await Congreso.findById(req.params.id);
+    const capacitacion = await Capacitacion.findById(req.params.id);
+    const participante = await Participante.findById(req.params.id);
+    res.render('actividades/ver_actividades', { user, actividad, libro, caplibro, reportetec, memoria, patente, congreso, capacitacion, participante });
 };
  
 module.exports = notasCtrl;
