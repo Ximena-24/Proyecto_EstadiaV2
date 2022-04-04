@@ -11,7 +11,7 @@ usersCtrl.renderSignupForm = (req, res) => {
 usersCtrl.signup = async (req, res) => {
     const errors = [];
 
-    const { name, email, password, confirm_password, rango, nivelA, nivelI } = req.body;
+    const { name, email, password, confirm_password, direccion, rango, nivelA, nivelI } = req.body;
     if (password != confirm_password) {
         errors.push({ text: 'Las contraseñas no coinciden' });
     }
@@ -25,6 +25,7 @@ usersCtrl.signup = async (req, res) => {
             email,
             password,
             confirm_password,
+            direccion,
             rango,
             nivelA,
             nivelI
@@ -35,7 +36,7 @@ usersCtrl.signup = async (req, res) => {
             req.flash('error_msg', 'El correo ya esta registrado');
             res.redirect('/');
         } else {
-            const newUser = new User({ name, email, password, rango, nivelA, nivelI });
+            const newUser = new User({ name, email, password, direccion, rango, nivelA, nivelI });
             newUser.password = await newUser.encrypPassword(password);
             await newUser.save();
             req.flash("success_msg", "Registro exitoso");

@@ -33,7 +33,7 @@ const UserSchema = new Schema({
         require: true
     },
     direccion: {
-        type: String,
+        type: Array,
         require: true
     },
     telefono: {

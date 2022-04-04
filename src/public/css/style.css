@@ -1858,7 +1858,6 @@ h2{
 }
 
 .checks{
-  font-size: 2rem;
   width: 2rem;
 }
 
@@ -1877,6 +1876,22 @@ h2{
   text-align: left;
   padding: 1.5rem 1rem 1rem;
   font-size: 1.5rem;
+}
+
+
+.direccion{
+  grid-template-columns: repeat(2, 1fr);
+  padding: 2rem 10rem;
+}
+
+.box4{
+  box-shadow: var(--box-shadow);
+  border-radius: 0.5rem;
+  background: var(--bg-color-2);
+  position: relative;
+  text-align: left;
+  padding: 1.5rem 1rem 1rem;
+  font-size: 1.2rem;
 }
 
 .dowland{

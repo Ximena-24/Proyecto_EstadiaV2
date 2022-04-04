@@ -32,22 +32,62 @@
         <section class="centrado">
 
             <div class="boxSel">
+
                 <h1 class="heading"><span>Generar </span>reporte </h1>
 
                 <form action="/generar" method="POST">
 
-                    <select name="tipo">
-                        <option selected>Seleccionar personal:</option>
-                        <option value="Maestro">Maestro</option>
-                        <option value="Director">Director</option>
-                    </select>
 
-                    <input type="radio" name="direccion" id="" value="MEC">Mecatronica <br>
-                    <input type="radio" name="direccion" id="" value="TIC">Tecnologias <br>
 
+                    <label class="">
+                        <input type="radio" name="tipo" id="derivar" value="Director"
+                            onclick="deshabilita()">
+                        <strong>Director</strong>
+                        <select name="direccion" id="derivado_usuario" disabled>
+                            <option selected>Seleccionar dirección</option>
+                            <option value="ASP">Desarrollo de negocios area Mercadotecnia y Agricultura Sustentable y Protegida</option>
+                            <option value="ASP">Agricultura Sustentable y Protegida (ASP)</option>
+                            <option value="IDIE">Desarrollo Negocios Area Logística (IDIE)</option>
+                            <option value="TIC">Tecnologías de la Información(TIC)</option>
+                            <option value="MTAUT">Mecatrónica Area Manufactura Aromatizada (MTAUT)</option>
+                            <option value="MTSMF">Mecatrónica Area Flexible (MTSMF)</option>
+                            <option value="IMT">Ingeniería en mecatrónica (IMT)</option>
+                            <option value="MI">Mantenimiento Area Industrial (MI)</option>
+                            <option value="PIM">Procesos industriales Manufactura (PIM)</option>
+                            <option value="ISP">Ingeniería Sistemas productivos (ISP)</option>
+                            <option value="MEA">Mecánica automotriz (MEA)</option>
+                            <option value="ARH">Administración Recursos Humanos (ARH)</option>
+                            <option value="CON">Programa de Contaduría (CON)</option>
+                            <option value="IFF">Programa de Ingeniería Fiscal (IFF)</option>
+                        </select>
+                    </label>
+
+
+                    <label class="">
+                        <input type="radio" name="tipo" id="derivar2" value="Maestro"
+                            onclick="deshabilita()">
+                        <strong>Maestros</strong>
+                        <select name="direccion" id="derivado_usuario2" disabled>
+                            <option selected>Seleccionar dirección</option>
+                            <option value="DNM">Desarrollo de Negocios Mercadotecnia (DNM)</option>
+                            <option value="ASP">Agricultura Sustentable y Protegida (ASP)</option>
+                            <option value="IDIE">Desarrollo Negocios Area Logística (IDIE)</option>
+                            <option value="TIC">Tecnologías de la Información(TIC)</option>
+                            <option value="MTAUT">Mecatrónica Area Manufactura Aromatizada (MTAUT)</option>
+                            <option value="MTSMF">Mecatrónica Area Flexible (MTSMF)</option>
+                            <option value="IMT">Ingeniería en mecatrónica (IMT)</option>
+                            <option value="MI">Mantenimiento Area Industrial (MI)</option>
+                            <option value="PIM">Procesos industriales Manufactura (PIM)</option>
+                            <option value="ISP">Ingeniería Sistemas productivos (ISP)</option>
+                            <option value="MEA">Mecánica automotriz (MEA)</option>
+                            <option value="ARH">Administración Recursos Humanos (ARH)</option>
+                            <option value="CON">Programa de Contaduría (CON)</option>
+                            <option value="IFF">Programa de Ingeniería Fiscal (IFF)</option>
+                        </select>
+                    </label>
                     <div>
                         <button class="btn">
-                        Buscar
+                            Buscar
                         </button>
                     </div>
 
@@ -61,3 +101,19 @@
 
 </section>
 <!-- gallery section ends -->
+<script>
+    function deshabilita() {
+        if (document.getElementById('derivar').checked) {
+            document.getElementById('derivado_usuario').disabled = false;
+        }
+        else {
+            document.getElementById('derivado_usuario').disabled = true;
+        }
+        if (document.getElementById('derivar2').checked) {
+            document.getElementById('derivado_usuario2').disabled = false;
+        }
+        else {
+            document.getElementById('derivado_usuario2').disabled = true;
+        }
+    }
+</script>

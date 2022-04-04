@@ -151,8 +151,9 @@ notasCtrl.renderMaestros = async (req, res) => {
 
     if (req.user.rango === "Director") {
         const dir = req.user.direccion;
-        const user = await User.find({ rango: "Maestro" , direccion: dir});
-        res.render('notes/lista_maestros', { user });
+        const usu = await User.find({ rango: "Maestro" , direccion:  {"$in": dir}});
+        res.render('notes/lista_maestros', { usu });
+        console.log(dir, usu);
     }
 
     if (req.user.rango === "Admin") {
